@@ -1,7 +1,6 @@
 /**@file ciddeco.c
  *	
  * @author Jenil Jain
- * @copyright Copyright 2015 Insensi Inc. All rights reserved.
  * This project is released under the GNU Public License.
  *
  * @brief Decodes CallerID message
