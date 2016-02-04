@@ -1,0 +1,25 @@
+digraph "fsk_serial"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="fsk_serial",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="iget_sample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a326f107539430dc475144721e8a3d688",tooltip="Get the current sample. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="idemodulator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a1e056276c5df3a6f1803aed2313871cf",tooltip="FSK demodulation. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="filter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a0cd322aafcc68375d9ee1f5ac4d60b46",tooltip="General function for filtering any frequency. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="get_channel_seizure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a6ed86518cd99a7ea692c11a396ef2722",tooltip="Detecting channel seizure signal. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="get_bit_raw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a352dc6016a3e45d7f3573d4cb08c1927",tooltip="Get a single bit of FSK signal. "];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="get_mark_signal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a355770a7620fc3d37477ba433579504c",tooltip="Detecting Mark signal. "];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="get_data_frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a3589b6f2cd9585fe74361841da0de198",tooltip="Get the data frame. "];
+  Node8 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

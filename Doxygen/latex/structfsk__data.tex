@@ -1,0 +1,166 @@
+\hypertarget{structfsk__data}{}\section{fsk\+\_\+data Struct Reference}
+\label{structfsk__data}\index{fsk\+\_\+data@{fsk\+\_\+data}}
+
+
+{\ttfamily \#include $<$fskmodem.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structfsk__data_a7d3b5ed8a33198ce8957052257f3ff8e}{nbit}
+\begin{DoxyCompactList}\small\item\em Number of Data Bits (5,7,8) \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_afc8612ac1878ff9b31ea6dcf5e712faf}{parity}
+\begin{DoxyCompactList}\small\item\em Parity 0=none 1=even 2=odd. \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_ae360946d35657de50d454a9f3e63ab8a}{instop}
+\begin{DoxyCompactList}\small\item\em Number of Stop Bits. \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_a39a41190627091dd0d1e7e8eabb7c095}{ispb}
+\begin{DoxyCompactList}\small\item\em Sample per F\+S\+K bit (Sample\+\_\+rate/baud\+\_\+rate) \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_a25f81eef1df67e4aa9e1e89b1df30ad9}{fsk\+\_\+std}
+\begin{DoxyCompactList}\small\item\em Type of F\+S\+K standard. \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_a72049894f5994b79f90f8b9f41969cd2}{xi0}
+\begin{DoxyCompactList}\small\item\em current demodulated value \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_a3d199152a35ba387fa7b6ead6150c699}{xi1}
+\begin{DoxyCompactList}\small\item\em previous demodulated value \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_a48bb683bd9e72b874c4050ae245fbc89}{xi2}
+\begin{DoxyCompactList}\small\item\em previous to previous demodulated value \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_a9c20aa777c4cc352227a1251cb226e14}{state}
+\begin{DoxyCompactList}\small\item\em Demodulation state. \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_ae12b4a66a5ad3c75bf39681fb9d6e77d}{pllispb}
+\begin{DoxyCompactList}\small\item\em Pll autosense. \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_ac5ff3d61665d426edf3fcc34254239b6}{pllids}
+\begin{DoxyCompactList}\small\item\em P\+L\+L adjustment. \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_aef22fc3fb9ea600a31e9ce03124568ae}{pllispb2}
+\begin{DoxyCompactList}\small\item\em Center of the P\+L\+L. \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_a072af15b1e767960389e117cbc4dfee9}{icont}
+\begin{DoxyCompactList}\small\item\em Count for D\+P\+L\+L. \end{DoxyCompactList}\item 
+int \hyperlink{structfsk__data_a1c1e27f259f858b132ab2e2f0c329770}{pll\+\_\+round\+\_\+off}
+\item 
+struct \hyperlink{structfilter__struct}{filter\+\_\+struct} \hyperlink{structfsk__data_a78dccf8a4139f58535535117265ef49c}{mark\+\_\+filter}
+\begin{DoxyCompactList}\small\item\em Structure to store mark filter data. \end{DoxyCompactList}\item 
+struct \hyperlink{structfilter__struct}{filter\+\_\+struct} \hyperlink{structfsk__data_afd5f314e1cf00a63eaacfa7abd3b9205}{space\+\_\+filter}
+\begin{DoxyCompactList}\small\item\em Structure to store space filter data. \end{DoxyCompactList}\item 
+struct \hyperlink{structfilter__struct}{filter\+\_\+struct} \hyperlink{structfsk__data_a21b94a212cda51b7b465299f2dd1e0c2}{demod\+\_\+filter}
+\begin{DoxyCompactList}\small\item\em Structure to store demodulator filter data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\hypertarget{structfsk__data_a21b94a212cda51b7b465299f2dd1e0c2}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!demod\+\_\+filter@{demod\+\_\+filter}}
+\index{demod\+\_\+filter@{demod\+\_\+filter}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{demod\+\_\+filter}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf filter\+\_\+struct} fsk\+\_\+data\+::demod\+\_\+filter}\label{structfsk__data_a21b94a212cda51b7b465299f2dd1e0c2}
+
+
+Structure to store demodulator filter data. 
+
+\hypertarget{structfsk__data_a25f81eef1df67e4aa9e1e89b1df30ad9}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!fsk\+\_\+std@{fsk\+\_\+std}}
+\index{fsk\+\_\+std@{fsk\+\_\+std}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{fsk\+\_\+std}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::fsk\+\_\+std}\label{structfsk__data_a25f81eef1df67e4aa9e1e89b1df30ad9}
+
+
+Type of F\+S\+K standard. 
+
+\hypertarget{structfsk__data_a072af15b1e767960389e117cbc4dfee9}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!icont@{icont}}
+\index{icont@{icont}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{icont}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::icont}\label{structfsk__data_a072af15b1e767960389e117cbc4dfee9}
+
+
+Count for D\+P\+L\+L. 
+
+\hypertarget{structfsk__data_ae360946d35657de50d454a9f3e63ab8a}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!instop@{instop}}
+\index{instop@{instop}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{instop}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::instop}\label{structfsk__data_ae360946d35657de50d454a9f3e63ab8a}
+
+
+Number of Stop Bits. 
+
+\hypertarget{structfsk__data_a39a41190627091dd0d1e7e8eabb7c095}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!ispb@{ispb}}
+\index{ispb@{ispb}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{ispb}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::ispb}\label{structfsk__data_a39a41190627091dd0d1e7e8eabb7c095}
+
+
+Sample per F\+S\+K bit (Sample\+\_\+rate/baud\+\_\+rate) 
+
+\hypertarget{structfsk__data_a78dccf8a4139f58535535117265ef49c}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!mark\+\_\+filter@{mark\+\_\+filter}}
+\index{mark\+\_\+filter@{mark\+\_\+filter}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{mark\+\_\+filter}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf filter\+\_\+struct} fsk\+\_\+data\+::mark\+\_\+filter}\label{structfsk__data_a78dccf8a4139f58535535117265ef49c}
+
+
+Structure to store mark filter data. 
+
+\hypertarget{structfsk__data_a7d3b5ed8a33198ce8957052257f3ff8e}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!nbit@{nbit}}
+\index{nbit@{nbit}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{nbit}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::nbit}\label{structfsk__data_a7d3b5ed8a33198ce8957052257f3ff8e}
+
+
+Number of Data Bits (5,7,8) 
+
+\hypertarget{structfsk__data_afc8612ac1878ff9b31ea6dcf5e712faf}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!parity@{parity}}
+\index{parity@{parity}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{parity}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::parity}\label{structfsk__data_afc8612ac1878ff9b31ea6dcf5e712faf}
+
+
+Parity 0=none 1=even 2=odd. 
+
+\hypertarget{structfsk__data_a1c1e27f259f858b132ab2e2f0c329770}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!pll\+\_\+round\+\_\+off@{pll\+\_\+round\+\_\+off}}
+\index{pll\+\_\+round\+\_\+off@{pll\+\_\+round\+\_\+off}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{pll\+\_\+round\+\_\+off}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::pll\+\_\+round\+\_\+off}\label{structfsk__data_a1c1e27f259f858b132ab2e2f0c329770}
+S\+P\+B is in float, so for proper P\+L\+L, round of is necessary \hypertarget{structfsk__data_ac5ff3d61665d426edf3fcc34254239b6}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!pllids@{pllids}}
+\index{pllids@{pllids}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{pllids}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::pllids}\label{structfsk__data_ac5ff3d61665d426edf3fcc34254239b6}
+
+
+P\+L\+L adjustment. 
+
+\hypertarget{structfsk__data_ae12b4a66a5ad3c75bf39681fb9d6e77d}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!pllispb@{pllispb}}
+\index{pllispb@{pllispb}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{pllispb}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::pllispb}\label{structfsk__data_ae12b4a66a5ad3c75bf39681fb9d6e77d}
+
+
+Pll autosense. 
+
+\hypertarget{structfsk__data_aef22fc3fb9ea600a31e9ce03124568ae}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!pllispb2@{pllispb2}}
+\index{pllispb2@{pllispb2}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{pllispb2}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::pllispb2}\label{structfsk__data_aef22fc3fb9ea600a31e9ce03124568ae}
+
+
+Center of the P\+L\+L. 
+
+\hypertarget{structfsk__data_afd5f314e1cf00a63eaacfa7abd3b9205}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!space\+\_\+filter@{space\+\_\+filter}}
+\index{space\+\_\+filter@{space\+\_\+filter}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{space\+\_\+filter}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf filter\+\_\+struct} fsk\+\_\+data\+::space\+\_\+filter}\label{structfsk__data_afd5f314e1cf00a63eaacfa7abd3b9205}
+
+
+Structure to store space filter data. 
+
+\hypertarget{structfsk__data_a9c20aa777c4cc352227a1251cb226e14}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!state@{state}}
+\index{state@{state}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::state}\label{structfsk__data_a9c20aa777c4cc352227a1251cb226e14}
+
+
+Demodulation state. 
+
+\hypertarget{structfsk__data_a72049894f5994b79f90f8b9f41969cd2}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!xi0@{xi0}}
+\index{xi0@{xi0}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{xi0}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::xi0}\label{structfsk__data_a72049894f5994b79f90f8b9f41969cd2}
+
+
+current demodulated value 
+
+\hypertarget{structfsk__data_a3d199152a35ba387fa7b6ead6150c699}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!xi1@{xi1}}
+\index{xi1@{xi1}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{xi1}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::xi1}\label{structfsk__data_a3d199152a35ba387fa7b6ead6150c699}
+
+
+previous demodulated value 
+
+\hypertarget{structfsk__data_a48bb683bd9e72b874c4050ae245fbc89}{}\index{fsk\+\_\+data@{fsk\+\_\+data}!xi2@{xi2}}
+\index{xi2@{xi2}!fsk\+\_\+data@{fsk\+\_\+data}}
+\subsubsection[{xi2}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+data\+::xi2}\label{structfsk__data_a48bb683bd9e72b874c4050ae245fbc89}
+
+
+previous to previous demodulated value 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fskmodem_8h}{fskmodem.\+h}\end{DoxyCompactItemize}

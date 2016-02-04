@@ -1,0 +1,345 @@
+\hypertarget{fskmodem_8c}{}\section{fskmodem.\+c File Reference}
+\label{fskmodem_8c}\index{fskmodem.\+c@{fskmodem.\+c}}
+
+
+F\+S\+K Demodulation.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}filter\+\_\+coefficients.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fskmodem.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gnuplot\+\_\+i.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fskmodem_8c_ad72dbcf6d0153db1b8d8a58001feed83}{D\+E\+B\+U\+G}~0
+\item 
+\#define \hyperlink{fskmodem_8c_a42f8c497a1968074f38bf5055c650dca}{V\+E\+R\+B\+O\+S\+E}~0
+\item 
+\#define \hyperlink{fskmodem_8c_a0cbea62f1ce2043dd08108e65ed8de1d}{S\+C\+A\+L\+E}~30000000
+\item 
+\#define \hyperlink{fskmodem_8c_a7ea6438b983b0c97d1e3316b97399f2c}{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T}~0
+\item 
+\#define \hyperlink{fskmodem_8c_a73b827225345cd87e7753e4ae25a9f72}{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T2}~1
+\item 
+\#define \hyperlink{fskmodem_8c_a638f6da6711c934bdbd08bffa1b2822e}{S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+E\+I\+Z\+U\+R\+E}~2
+\item 
+\#define \hyperlink{fskmodem_8c_af915cce8ac646fd21d7a7acd1345c7ed}{S\+T\+A\+T\+E\+\_\+\+M\+A\+R\+K\+\_\+\+S\+I\+G\+N\+A\+L}~3
+\item 
+\#define \hyperlink{fskmodem_8c_aa986dbb00367acd1b750603bd888b3ff}{S\+T\+A\+T\+E\+\_\+\+G\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+R\+A\+M\+E}~4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{fskmodem_8c_a326f107539430dc475144721e8a3d688}{iget\+\_\+sample} (short $\ast$$\ast$buffer, int $\ast$len)
+\begin{DoxyCompactList}\small\item\em Get the current sample. \end{DoxyCompactList}\item 
+static int \hyperlink{fskmodem_8c_a0cd322aafcc68375d9ee1f5ac4d60b46}{filter} (struct \hyperlink{structfilter__struct}{filter\+\_\+struct} $\ast$fs, int in)
+\begin{DoxyCompactList}\small\item\em General function for filtering any frequency. \end{DoxyCompactList}\item 
+static int \hyperlink{fskmodem_8c_a1e056276c5df3a6f1803aed2313871cf}{idemodulator} (\hyperlink{structfsk__data}{fsk\+\_\+data} $\ast$fskd, int $\ast$retval, int x)
+\begin{DoxyCompactList}\small\item\em F\+S\+K demodulation. \end{DoxyCompactList}\item 
+int \hyperlink{fskmodem_8c_a183afaf79ee92e26e8aacd129d9be3cb}{fskmodem\+\_\+init} (\hyperlink{structfsk__data}{fsk\+\_\+data} $\ast$fskd)
+\begin{DoxyCompactList}\small\item\em Initialize the F\+S\+K data. \end{DoxyCompactList}\item 
+static int \hyperlink{fskmodem_8c_a352dc6016a3e45d7f3573d4cb08c1927}{get\+\_\+bit\+\_\+raw} (\hyperlink{structfsk__data}{fsk\+\_\+data} $\ast$fskd, short $\ast$buffer, int $\ast$len)
+\begin{DoxyCompactList}\small\item\em Get a single bit of F\+S\+K signal. \end{DoxyCompactList}\item 
+static int \hyperlink{fskmodem_8c_a6ed86518cd99a7ea692c11a396ef2722}{get\+\_\+channel\+\_\+seizure} (\hyperlink{structfsk__data}{fsk\+\_\+data} $\ast$$\ast$fskd, short $\ast$$\ast$buffer, int $\ast$$\ast$len)
+\begin{DoxyCompactList}\small\item\em Detecting channel seizure signal. \end{DoxyCompactList}\item 
+static int \hyperlink{fskmodem_8c_a355770a7620fc3d37477ba433579504c}{get\+\_\+mark\+\_\+signal} (\hyperlink{structfsk__data}{fsk\+\_\+data} $\ast$$\ast$fskd, short $\ast$$\ast$buffer, int $\ast$$\ast$len)
+\begin{DoxyCompactList}\small\item\em Detecting Mark signal. \end{DoxyCompactList}\item 
+static int \hyperlink{fskmodem_8c_a3589b6f2cd9585fe74361841da0de198}{get\+\_\+data\+\_\+frame} (\hyperlink{structfsk__data}{fsk\+\_\+data} $\ast$$\ast$fskd, short $\ast$$\ast$buffer, int $\ast$$\ast$len)
+\begin{DoxyCompactList}\small\item\em Get the data frame. \end{DoxyCompactList}\item 
+int \hyperlink{fskmodem_8c_a6315165519388f15eccffd8103769ee3}{fsk\+\_\+serial} (\hyperlink{structfsk__data}{fsk\+\_\+data} $\ast$fskd, short $\ast$buffer, int $\ast$len, int $\ast$outbyte)
+\begin{DoxyCompactList}\small\item\em Retrieve a serial byte into outbyte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{fskmodem_8c_ad43c3812e6d13e0518d9f8b8f463ffcf}{count} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+F\+S\+K Demodulation. 
+
+\begin{DoxyAuthor}{Author}
+Jenil Jain 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2015 Insensi Inc. All rights reserved. This project is released under the G\+N\+U Public License.
+\end{DoxyCopyright}
+Demodulate the Caller\+I\+D F\+S\+K data by using various filter based on the F\+S\+K frequencies.
+
+\begin{DoxyNote}{Note}
+Includes code and algorithms from the Zapata library and Aesterisk. 
+\end{DoxyNote}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{fskmodem_8c_ad72dbcf6d0153db1b8d8a58001feed83}{}\index{fskmodem.\+c@{fskmodem.\+c}!D\+E\+B\+U\+G@{D\+E\+B\+U\+G}}
+\index{D\+E\+B\+U\+G@{D\+E\+B\+U\+G}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{D\+E\+B\+U\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G~0}\label{fskmodem_8c_ad72dbcf6d0153db1b8d8a58001feed83}
+\hypertarget{fskmodem_8c_a0cbea62f1ce2043dd08108e65ed8de1d}{}\index{fskmodem.\+c@{fskmodem.\+c}!S\+C\+A\+L\+E@{S\+C\+A\+L\+E}}
+\index{S\+C\+A\+L\+E@{S\+C\+A\+L\+E}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{S\+C\+A\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+A\+L\+E~30000000}\label{fskmodem_8c_a0cbea62f1ce2043dd08108e65ed8de1d}
+\hypertarget{fskmodem_8c_a638f6da6711c934bdbd08bffa1b2822e}{}\index{fskmodem.\+c@{fskmodem.\+c}!S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+E\+I\+Z\+U\+R\+E@{S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+E\+I\+Z\+U\+R\+E}}
+\index{S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+E\+I\+Z\+U\+R\+E@{S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+E\+I\+Z\+U\+R\+E}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+E\+I\+Z\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+E\+I\+Z\+U\+R\+E~2}\label{fskmodem_8c_a638f6da6711c934bdbd08bffa1b2822e}
+\hypertarget{fskmodem_8c_aa986dbb00367acd1b750603bd888b3ff}{}\index{fskmodem.\+c@{fskmodem.\+c}!S\+T\+A\+T\+E\+\_\+\+G\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+R\+A\+M\+E@{S\+T\+A\+T\+E\+\_\+\+G\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+R\+A\+M\+E}}
+\index{S\+T\+A\+T\+E\+\_\+\+G\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+R\+A\+M\+E@{S\+T\+A\+T\+E\+\_\+\+G\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+R\+A\+M\+E}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{S\+T\+A\+T\+E\+\_\+\+G\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+R\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+E\+\_\+\+G\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+R\+A\+M\+E~4}\label{fskmodem_8c_aa986dbb00367acd1b750603bd888b3ff}
+\hypertarget{fskmodem_8c_af915cce8ac646fd21d7a7acd1345c7ed}{}\index{fskmodem.\+c@{fskmodem.\+c}!S\+T\+A\+T\+E\+\_\+\+M\+A\+R\+K\+\_\+\+S\+I\+G\+N\+A\+L@{S\+T\+A\+T\+E\+\_\+\+M\+A\+R\+K\+\_\+\+S\+I\+G\+N\+A\+L}}
+\index{S\+T\+A\+T\+E\+\_\+\+M\+A\+R\+K\+\_\+\+S\+I\+G\+N\+A\+L@{S\+T\+A\+T\+E\+\_\+\+M\+A\+R\+K\+\_\+\+S\+I\+G\+N\+A\+L}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{S\+T\+A\+T\+E\+\_\+\+M\+A\+R\+K\+\_\+\+S\+I\+G\+N\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+E\+\_\+\+M\+A\+R\+K\+\_\+\+S\+I\+G\+N\+A\+L~3}\label{fskmodem_8c_af915cce8ac646fd21d7a7acd1345c7ed}
+\hypertarget{fskmodem_8c_a7ea6438b983b0c97d1e3316b97399f2c}{}\index{fskmodem.\+c@{fskmodem.\+c}!S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T@{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T}}
+\index{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T@{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T~0}\label{fskmodem_8c_a7ea6438b983b0c97d1e3316b97399f2c}
+\hypertarget{fskmodem_8c_a73b827225345cd87e7753e4ae25a9f72}{}\index{fskmodem.\+c@{fskmodem.\+c}!S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T2@{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T2}}
+\index{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T2@{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T2}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+R\+T\+B\+I\+T2~1}\label{fskmodem_8c_a73b827225345cd87e7753e4ae25a9f72}
+\hypertarget{fskmodem_8c_a42f8c497a1968074f38bf5055c650dca}{}\index{fskmodem.\+c@{fskmodem.\+c}!V\+E\+R\+B\+O\+S\+E@{V\+E\+R\+B\+O\+S\+E}}
+\index{V\+E\+R\+B\+O\+S\+E@{V\+E\+R\+B\+O\+S\+E}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{V\+E\+R\+B\+O\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+R\+B\+O\+S\+E~0}\label{fskmodem_8c_a42f8c497a1968074f38bf5055c650dca}
+
+
+\subsection{Function Documentation}
+\hypertarget{fskmodem_8c_a0cd322aafcc68375d9ee1f5ac4d60b46}{}\index{fskmodem.\+c@{fskmodem.\+c}!filter@{filter}}
+\index{filter@{filter}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{filter}]{\setlength{\rightskip}{0pt plus 5cm}static int filter (
+\begin{DoxyParamCaption}
+\item[{struct {\bf filter\+\_\+struct} $\ast$}]{fs, }
+\item[{int}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{fskmodem_8c_a0cd322aafcc68375d9ee1f5ac4d60b46}
+
+
+General function for filtering any frequency. 
+
+All the filters used are I\+I\+R Butterworth filter and the general equation for it, is
+
+y\mbox{[}n\mbox{]} = c0$\ast$x\mbox{[}n\mbox{]} + c1$\ast$x\mbox{[}n-\/1\mbox{]} + ... + c\+M$\ast$x\mbox{[}n-\/\+M\mbox{]} -\/ ( d1$\ast$y\mbox{[}n-\/1\mbox{]} + d2$\ast$y\mbox{[}n-\/2\mbox{]} + ... + d\+N$\ast$y\mbox{[}n-\/\+N\mbox{]}) ~\newline
+ where N = no. of previous outputs \& ~\newline
+ M = no. of previous inputs ~\newline
+ c1,c2,...,c\+M = input coefficients ~\newline
+ d1,d2,...,d\+N = output coefficients ~\newline
+ x\mbox{[}n\mbox{]} = input values ~\newline
+ y\mbox{[}n\mbox{]} = output values ~\newline
+
+
+The c\+\_\+coef, d\+\_\+coef and the gain depends on the order and type of the filter
+
+
+\begin{DoxyParams}{Parameters}
+{\em fs} & structer containing all the filter parameter for a particular frequency \\
+\hline
+{\em in} & current input value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current output value 
+\end{DoxyReturn}
+\hypertarget{fskmodem_8c_a6315165519388f15eccffd8103769ee3}{}\index{fskmodem.\+c@{fskmodem.\+c}!fsk\+\_\+serial@{fsk\+\_\+serial}}
+\index{fsk\+\_\+serial@{fsk\+\_\+serial}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{fsk\+\_\+serial}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+serial (
+\begin{DoxyParamCaption}
+\item[{{\bf fsk\+\_\+data} $\ast$}]{fskd, }
+\item[{short $\ast$}]{buffer, }
+\item[{int $\ast$}]{len, }
+\item[{int $\ast$}]{outbyte}
+\end{DoxyParamCaption}
+)}\label{fskmodem_8c_a6315165519388f15eccffd8103769ee3}
+
+
+Retrieve a serial byte into outbyte. 
+
+Buffer is a pointer into a series of shorts and len records the number of bytes in the buffer. len will be overwritten with the number of bytes left that were not consumed.
+
+\begin{DoxyReturn}{Returns}
+return value is as follows\+: \begin{DoxyItemize}
+\item 0\+: Still looking for something... \item 1\+: An output byte was received and stored in outbyte \item -\/1\+: An error occured in the transmission \end{DoxyItemize}
+
+\end{DoxyReturn}
+\hypertarget{fskmodem_8c_a183afaf79ee92e26e8aacd129d9be3cb}{}\index{fskmodem.\+c@{fskmodem.\+c}!fskmodem\+\_\+init@{fskmodem\+\_\+init}}
+\index{fskmodem\+\_\+init@{fskmodem\+\_\+init}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{fskmodem\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}int fskmodem\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf fsk\+\_\+data} $\ast$}]{fskd}
+\end{DoxyParamCaption}
+)}\label{fskmodem_8c_a183afaf79ee92e26e8aacd129d9be3cb}
+
+
+Initialize the F\+S\+K data. 
+
+Initialize all the parameters used by the filter and demodulator functions to decode the C\+I\+D message. The parameters are already calculated in filter\+\_\+coefficient.\+h file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fskd} & pointer to \hyperlink{structfsk__data}{fsk\+\_\+data} struct \\
+\hline
+\end{DoxyParams}
+\hypertarget{fskmodem_8c_a352dc6016a3e45d7f3573d4cb08c1927}{}\index{fskmodem.\+c@{fskmodem.\+c}!get\+\_\+bit\+\_\+raw@{get\+\_\+bit\+\_\+raw}}
+\index{get\+\_\+bit\+\_\+raw@{get\+\_\+bit\+\_\+raw}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{get\+\_\+bit\+\_\+raw}]{\setlength{\rightskip}{0pt plus 5cm}static int get\+\_\+bit\+\_\+raw (
+\begin{DoxyParamCaption}
+\item[{{\bf fsk\+\_\+data} $\ast$}]{fskd, }
+\item[{short $\ast$}]{buffer, }
+\item[{int $\ast$}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{fskmodem_8c_a352dc6016a3e45d7f3573d4cb08c1927}
+
+
+Get a single bit of F\+S\+K signal. 
+
+This function implements a D\+P\+L\+L to synchronize with the bits and decode a single F\+S\+K bit data. It looks for the transition between 0s and 1s and adjust the P\+L\+L value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fskd} & pointer to data struct containing F\+S\+K parameters \\
+\hline
+{\em buffer} & pointer to buffer containing samples \\
+\hline
+{\em len} & pointer to current number of samples in the buffer\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0x80} & if the F\+S\+K bit is 1 \\
+\hline
+{\em 0x00} & if the F\+S\+K bit is 0. \\
+\hline
+{\em -\/1} & if the number fo samples are not sufficient for a bit \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{fskmodem_8c_a6ed86518cd99a7ea692c11a396ef2722}{}\index{fskmodem.\+c@{fskmodem.\+c}!get\+\_\+channel\+\_\+seizure@{get\+\_\+channel\+\_\+seizure}}
+\index{get\+\_\+channel\+\_\+seizure@{get\+\_\+channel\+\_\+seizure}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{get\+\_\+channel\+\_\+seizure}]{\setlength{\rightskip}{0pt plus 5cm}static int get\+\_\+channel\+\_\+seizure (
+\begin{DoxyParamCaption}
+\item[{{\bf fsk\+\_\+data} $\ast$$\ast$}]{fskd, }
+\item[{short $\ast$$\ast$}]{buffer, }
+\item[{int $\ast$$\ast$}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{fskmodem_8c_a6ed86518cd99a7ea692c11a396ef2722}
+
+
+Detecting channel seizure signal. 
+
+The Caller I\+D message starts with a Channel seizure signal which consists 300 bits containing alternate 1s and 0s. Checking if we detected the channel seizure signal properly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fskd} & Address of pointer to F\+S\+K data structure \\
+\hline
+{\em buffer} & Address of pointer to current sample \\
+\hline
+{\em len} & Address of pointer containing pointer of length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful else -\/1 if error 
+\end{DoxyReturn}
+\hypertarget{fskmodem_8c_a3589b6f2cd9585fe74361841da0de198}{}\index{fskmodem.\+c@{fskmodem.\+c}!get\+\_\+data\+\_\+frame@{get\+\_\+data\+\_\+frame}}
+\index{get\+\_\+data\+\_\+frame@{get\+\_\+data\+\_\+frame}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{get\+\_\+data\+\_\+frame}]{\setlength{\rightskip}{0pt plus 5cm}static int get\+\_\+data\+\_\+frame (
+\begin{DoxyParamCaption}
+\item[{{\bf fsk\+\_\+data} $\ast$$\ast$}]{fskd, }
+\item[{short $\ast$$\ast$}]{buffer, }
+\item[{int $\ast$$\ast$}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{fskmodem_8c_a3589b6f2cd9585fe74361841da0de198}
+
+
+Get the data frame. 
+
+Data bytes starts after the Mark signal. The message consists of a sequence of 10-\/bit frames. A start bit(0), 8 bits of information(\+L\+S\+B to M\+S\+B) and then a stop bit(1).
+
+
+\begin{DoxyParams}{Parameters}
+{\em fskd} & Address of pointer to F\+S\+K data structure \\
+\hline
+{\em buffer} & Address of pointer to current sample \\
+\hline
+{\em len} & Address of pointer containing pointer of length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful else -\/1 if error 
+\end{DoxyReturn}
+\hypertarget{fskmodem_8c_a355770a7620fc3d37477ba433579504c}{}\index{fskmodem.\+c@{fskmodem.\+c}!get\+\_\+mark\+\_\+signal@{get\+\_\+mark\+\_\+signal}}
+\index{get\+\_\+mark\+\_\+signal@{get\+\_\+mark\+\_\+signal}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{get\+\_\+mark\+\_\+signal}]{\setlength{\rightskip}{0pt plus 5cm}static int get\+\_\+mark\+\_\+signal (
+\begin{DoxyParamCaption}
+\item[{{\bf fsk\+\_\+data} $\ast$$\ast$}]{fskd, }
+\item[{short $\ast$$\ast$}]{buffer, }
+\item[{int $\ast$$\ast$}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{fskmodem_8c_a355770a7620fc3d37477ba433579504c}
+
+
+Detecting Mark signal. 
+
+After the channel seizure, there is a sequence of 180 Mark signals. The purpose of the Channel Seizure Signal and the Mark Signal is to prepare the data receiver in the Customer Premise Equipment (C\+P\+E) for the reception of the actual C\+I\+D message
+
+
+\begin{DoxyParams}{Parameters}
+{\em fskd} & Address of pointer to F\+S\+K data structure \\
+\hline
+{\em buffer} & Address of pointer to current sample \\
+\hline
+{\em len} & Address of pointer containing pointer of length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful else -\/1 if error 
+\end{DoxyReturn}
+\hypertarget{fskmodem_8c_a1e056276c5df3a6f1803aed2313871cf}{}\index{fskmodem.\+c@{fskmodem.\+c}!idemodulator@{idemodulator}}
+\index{idemodulator@{idemodulator}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{idemodulator}]{\setlength{\rightskip}{0pt plus 5cm}static int idemodulator (
+\begin{DoxyParamCaption}
+\item[{{\bf fsk\+\_\+data} $\ast$}]{fskd, }
+\item[{int $\ast$}]{retval, }
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{fskmodem_8c_a1e056276c5df3a6f1803aed2313871cf}
+
+
+F\+S\+K demodulation. 
+
+For F\+S\+K demodulation using recursive filter, the waveform is passed through Mark and Space filter to create the respective envelope. Based on the filter values, decision is made whether it\textquotesingle{}s Mark or it\textquotesingle{}s Space. But the values generated by this filter can fade, so we use a low pass filter to differentiate between the two frequencies.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fskd} & pointer to the data struct containing F\+S\+K parameters \\
+\hline
+{\em retval} & pointer to contain the demodulated value \\
+\hline
+{\em x} & Current value of the sample \\
+\hline
+\end{DoxyParams}
+\hypertarget{fskmodem_8c_a326f107539430dc475144721e8a3d688}{}\index{fskmodem.\+c@{fskmodem.\+c}!iget\+\_\+sample@{iget\+\_\+sample}}
+\index{iget\+\_\+sample@{iget\+\_\+sample}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{iget\+\_\+sample}]{\setlength{\rightskip}{0pt plus 5cm}static int iget\+\_\+sample (
+\begin{DoxyParamCaption}
+\item[{short $\ast$$\ast$}]{buffer, }
+\item[{int $\ast$}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{fskmodem_8c_a326f107539430dc475144721e8a3d688}
+
+
+Get the current sample. 
+
+Get the value of the current sample and increment the pointer. Also decrement the length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Address of pointer of current sample \\
+\hline
+{\em len} & Address of the length variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current sample value 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{fskmodem_8c_ad43c3812e6d13e0518d9f8b8f463ffcf}{}\index{fskmodem.\+c@{fskmodem.\+c}!count@{count}}
+\index{count@{count}!fskmodem.\+c@{fskmodem.\+c}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}int count = 0\hspace{0.3cm}{\ttfamily [static]}}\label{fskmodem_8c_ad43c3812e6d13e0518d9f8b8f463ffcf}

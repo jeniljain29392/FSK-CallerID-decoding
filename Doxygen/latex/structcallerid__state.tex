@@ -1,0 +1,128 @@
+\hypertarget{structcallerid__state}{}\section{callerid\+\_\+state Struct Reference}
+\label{structcallerid__state}\index{callerid\+\_\+state@{callerid\+\_\+state}}
+
+
+Defining struct for Caller I\+D state machine.  
+
+
+
+
+{\ttfamily \#include $<$ciddeco.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structfsk__data}{fsk\+\_\+data} \hyperlink{structcallerid__state_a7a53484d75efb8c9b751f553766cbdf6}{fskd}
+\begin{DoxyCompactList}\small\item\em Structure containing parameters for F\+S\+K modulation. \end{DoxyCompactList}\item 
+int \hyperlink{structcallerid__state_a6a073312c8b127292ccd43573f46af1f}{rawdata} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em buffer to store the C\+I\+D data bytes \end{DoxyCompactList}\item 
+short \hyperlink{structcallerid__state_adab32a1be89ad9fac4a94bf77640d663}{oldstuff} \mbox{[}1000\mbox{]}
+\begin{DoxyCompactList}\small\item\em buffer to store previous samples \end{DoxyCompactList}\item 
+int \hyperlink{structcallerid__state_a39770e5775e3b30fd9b510b1354b13c3}{oldlen}
+\item 
+int \hyperlink{structcallerid__state_a31b48e329478cd345750fd5311a483f1}{pos}
+\item 
+int \hyperlink{structcallerid__state_a40a4612d818438947b0d8857fa86ef8e}{type}
+\item 
+int \hyperlink{structcallerid__state_a16e10e23fac23e09c68314e4115747e4}{cksum}
+\item 
+char \hyperlink{structcallerid__state_a521ec0abccd42445c58230ba7cb4856d}{name} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array to store the Name. \end{DoxyCompactList}\item 
+char \hyperlink{structcallerid__state_af7151357841b78dcfcb62e58de1cbeb2}{number} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array to store the Number. \end{DoxyCompactList}\item 
+char \hyperlink{structcallerid__state_a8d42244ee94ebf3e63931b2dd9f7bd82}{date\+\_\+time} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array to store the formated date and time. \end{DoxyCompactList}\item 
+int \hyperlink{structcallerid__state_a8282272c310e273ff345babd81adae4a}{flags}
+\item 
+int \hyperlink{structcallerid__state_a62086559eee5b1f234fb1fc0e742d7c4}{sawflag}
+\begin{DoxyCompactList}\small\item\em Flag for the decoding state machine. \end{DoxyCompactList}\item 
+int \hyperlink{structcallerid__state_a2a6a106f73258e45b760ea3e5bd2ef74}{len}
+\item 
+int \hyperlink{structcallerid__state_a84a4244e0f6780f44cb57ae15fa0dfe4}{skipflag}
+\item 
+unsigned short \hyperlink{structcallerid__state_a66aba9a925c45880b6b61a1dcc389e73}{crc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defining struct for Caller I\+D state machine. 
+
+\subsection{Field Documentation}
+\hypertarget{structcallerid__state_a16e10e23fac23e09c68314e4115747e4}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!cksum@{cksum}}
+\index{cksum@{cksum}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{cksum}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+state\+::cksum}\label{structcallerid__state_a16e10e23fac23e09c68314e4115747e4}
+\hypertarget{structcallerid__state_a66aba9a925c45880b6b61a1dcc389e73}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!crc@{crc}}
+\index{crc@{crc}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{crc}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short callerid\+\_\+state\+::crc}\label{structcallerid__state_a66aba9a925c45880b6b61a1dcc389e73}
+\hypertarget{structcallerid__state_a8d42244ee94ebf3e63931b2dd9f7bd82}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!date\+\_\+time@{date\+\_\+time}}
+\index{date\+\_\+time@{date\+\_\+time}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{date\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}char callerid\+\_\+state\+::date\+\_\+time\mbox{[}64\mbox{]}}\label{structcallerid__state_a8d42244ee94ebf3e63931b2dd9f7bd82}
+
+
+Array to store the formated date and time. 
+
+\hypertarget{structcallerid__state_a8282272c310e273ff345babd81adae4a}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!flags@{flags}}
+\index{flags@{flags}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+state\+::flags}\label{structcallerid__state_a8282272c310e273ff345babd81adae4a}
+\hypertarget{structcallerid__state_a7a53484d75efb8c9b751f553766cbdf6}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!fskd@{fskd}}
+\index{fskd@{fskd}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{fskd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fsk\+\_\+data} callerid\+\_\+state\+::fskd}\label{structcallerid__state_a7a53484d75efb8c9b751f553766cbdf6}
+
+
+Structure containing parameters for F\+S\+K modulation. 
+
+\hypertarget{structcallerid__state_a2a6a106f73258e45b760ea3e5bd2ef74}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!len@{len}}
+\index{len@{len}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{len}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+state\+::len}\label{structcallerid__state_a2a6a106f73258e45b760ea3e5bd2ef74}
+\hypertarget{structcallerid__state_a521ec0abccd42445c58230ba7cb4856d}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!name@{name}}
+\index{name@{name}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}char callerid\+\_\+state\+::name\mbox{[}64\mbox{]}}\label{structcallerid__state_a521ec0abccd42445c58230ba7cb4856d}
+
+
+Array to store the Name. 
+
+\hypertarget{structcallerid__state_af7151357841b78dcfcb62e58de1cbeb2}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!number@{number}}
+\index{number@{number}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{number}]{\setlength{\rightskip}{0pt plus 5cm}char callerid\+\_\+state\+::number\mbox{[}64\mbox{]}}\label{structcallerid__state_af7151357841b78dcfcb62e58de1cbeb2}
+
+
+Array to store the Number. 
+
+\hypertarget{structcallerid__state_a39770e5775e3b30fd9b510b1354b13c3}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!oldlen@{oldlen}}
+\index{oldlen@{oldlen}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{oldlen}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+state\+::oldlen}\label{structcallerid__state_a39770e5775e3b30fd9b510b1354b13c3}
+\hypertarget{structcallerid__state_adab32a1be89ad9fac4a94bf77640d663}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!oldstuff@{oldstuff}}
+\index{oldstuff@{oldstuff}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{oldstuff}]{\setlength{\rightskip}{0pt plus 5cm}short callerid\+\_\+state\+::oldstuff\mbox{[}1000\mbox{]}}\label{structcallerid__state_adab32a1be89ad9fac4a94bf77640d663}
+
+
+buffer to store previous samples 
+
+\hypertarget{structcallerid__state_a31b48e329478cd345750fd5311a483f1}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!pos@{pos}}
+\index{pos@{pos}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+state\+::pos}\label{structcallerid__state_a31b48e329478cd345750fd5311a483f1}
+\hypertarget{structcallerid__state_a6a073312c8b127292ccd43573f46af1f}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!rawdata@{rawdata}}
+\index{rawdata@{rawdata}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{rawdata}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+state\+::rawdata\mbox{[}256\mbox{]}}\label{structcallerid__state_a6a073312c8b127292ccd43573f46af1f}
+
+
+buffer to store the C\+I\+D data bytes 
+
+\hypertarget{structcallerid__state_a62086559eee5b1f234fb1fc0e742d7c4}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!sawflag@{sawflag}}
+\index{sawflag@{sawflag}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{sawflag}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+state\+::sawflag}\label{structcallerid__state_a62086559eee5b1f234fb1fc0e742d7c4}
+
+
+Flag for the decoding state machine. 
+
+\hypertarget{structcallerid__state_a84a4244e0f6780f44cb57ae15fa0dfe4}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!skipflag@{skipflag}}
+\index{skipflag@{skipflag}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{skipflag}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+state\+::skipflag}\label{structcallerid__state_a84a4244e0f6780f44cb57ae15fa0dfe4}
+\hypertarget{structcallerid__state_a40a4612d818438947b0d8857fa86ef8e}{}\index{callerid\+\_\+state@{callerid\+\_\+state}!type@{type}}
+\index{type@{type}!callerid\+\_\+state@{callerid\+\_\+state}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+state\+::type}\label{structcallerid__state_a40a4612d818438947b0d8857fa86ef8e}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ciddeco_8h}{ciddeco.\+h}\end{DoxyCompactItemize}

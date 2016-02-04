@@ -1,0 +1,8 @@
+digraph "fsk_data"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{fsk_data\n|+ nbit\l+ parity\l+ instop\l+ ispb\l+ fsk_std\l+ xi0\l+ xi1\l+ xi2\l+ state\l+ pllispb\l+ pllids\l+ pllispb2\l+ icont\l+ pll_round_off\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +mark_filter\n+demod_filter\n+space_filter" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{filter_struct\n|+ c_coef\l+ d_coef\l+ xv\l+ yv\l+ gain\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfilter__struct.html",tooltip="new filter structure "];
+}

@@ -1,0 +1,241 @@
+\hypertarget{ciddeco_8c}{}\section{ciddeco.\+c File Reference}
+\label{ciddeco_8c}\index{ciddeco.\+c@{ciddeco.\+c}}
+
+
+Decodes Caller\+I\+D message.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}fskmodem.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ciddeco.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ciddeco_8c_a03c576e7396d21254316447e7eb73dc8}{F\+I\+L\+E\+\_\+\+O\+F\+F\+S\+E\+T}~113600
+\item 
+\#define \hyperlink{ciddeco_8c_a5794f3b5b277bf2f7b7a5a57d093f932}{B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+O\+O\+P}~1000
+\item 
+\#define \hyperlink{ciddeco_8c_a7fba09db2bbeb0dbcca0105428c5a652}{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E}~0
+\item 
+\#define \hyperlink{ciddeco_8c_ac146c3c7afc6f342ae4f476bd46d924a}{M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H}~1
+\item 
+\#define \hyperlink{ciddeco_8c_afb8c72ce35c4a1f4a2588d6573e54aa1}{D\+A\+T\+A\+\_\+\+T\+Y\+P\+E}~2
+\item 
+\#define \hyperlink{ciddeco_8c_af0113b8a0d65aab384607436aa155838}{D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+T\+H}~3
+\item 
+\#define \hyperlink{ciddeco_8c_aad9ae913bdfab20dd94ad04ee2d5b045}{D\+A\+T\+A}~4
+\item 
+\#define \hyperlink{ciddeco_8c_ac1ae4add974b9cfc6b5aaf8a578f01ab}{U\+N\+K\+N\+O\+W\+N}~10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcallerid__state}{callerid\+\_\+state} $\ast$ \hyperlink{ciddeco_8c_adc002ff8c5972c35907d9ef2aa2ec161}{callerid\+\_\+new} (int cid\+\_\+signalling, \hyperlink{structParam}{Param} $\ast$demod\+\_\+param)
+\begin{DoxyCompactList}\small\item\em Create a caller\+I\+D state machine. \end{DoxyCompactList}\item 
+void \hyperlink{ciddeco_8c_a4d792e593d99c8b5b3a5534e73082c9d}{callerid\+\_\+free} (struct \hyperlink{structcallerid__state}{callerid\+\_\+state} $\ast$cid)
+\begin{DoxyCompactList}\small\item\em This function frees \hyperlink{structcallerid__state}{callerid\+\_\+state} cid. \end{DoxyCompactList}\item 
+static void \hyperlink{ciddeco_8c_a9f70cb7819a623e9914ad71526ae232e}{get\+\_\+\+C\+I\+D\+\_\+info} (struct \hyperlink{structcallerid__state}{callerid\+\_\+state} $\ast$cid)
+\begin{DoxyCompactList}\small\item\em This function Display the Caller\+I\+D message. \end{DoxyCompactList}\item 
+static int \hyperlink{ciddeco_8c_aed8d3c6a765781523ed8964b7523f5e3}{decode\+\_\+\+C\+I\+D\+\_\+msg} (struct \hyperlink{structcallerid__state}{callerid\+\_\+state} $\ast$cid, int data\+\_\+byte)
+\begin{DoxyCompactList}\small\item\em Decoding the C\+I\+D message. \end{DoxyCompactList}\item 
+int \hyperlink{ciddeco_8c_a064fa3b055fb52a7dac2cbed7c63a5f8}{callerid\+\_\+feed} (struct \hyperlink{structcallerid__state}{callerid\+\_\+state} $\ast$cid, unsigned char $\ast$ubuf, int len)
+\begin{DoxyCompactList}\small\item\em Read samples into the state machine. \end{DoxyCompactList}\item 
+static int \hyperlink{ciddeco_8c_a010855d0f62d4eefc3df76540f0ab368}{get\+Header} (unsigned char wavbuf\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Display the Wav file header information. \end{DoxyCompactList}\item 
+int \hyperlink{ciddeco_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Demodulate Caller I\+D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Decodes Caller\+I\+D message. 
+
+\begin{DoxyAuthor}{Author}
+Jenil Jain 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2015 Insensi Inc. All rights reserved. This project is released under the G\+N\+U Public License.
+\end{DoxyCopyright}
+Send the caller\+I\+D buffered bytes for F\+S\+K demodulation and decode the Caller I\+D message from it.
+
+\begin{DoxyNote}{Note}
+Includes code and algorithms from the Zapata library and Aesterisk. 
+\end{DoxyNote}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ciddeco_8c_a5794f3b5b277bf2f7b7a5a57d093f932}{}\index{ciddeco.\+c@{ciddeco.\+c}!B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+O\+O\+P@{B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+O\+O\+P}}
+\index{B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+O\+O\+P@{B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+O\+O\+P}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+O\+O\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+O\+O\+P~1000}\label{ciddeco_8c_a5794f3b5b277bf2f7b7a5a57d093f932}
+\hypertarget{ciddeco_8c_aad9ae913bdfab20dd94ad04ee2d5b045}{}\index{ciddeco.\+c@{ciddeco.\+c}!D\+A\+T\+A@{D\+A\+T\+A}}
+\index{D\+A\+T\+A@{D\+A\+T\+A}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{D\+A\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A~4}\label{ciddeco_8c_aad9ae913bdfab20dd94ad04ee2d5b045}
+\hypertarget{ciddeco_8c_af0113b8a0d65aab384607436aa155838}{}\index{ciddeco.\+c@{ciddeco.\+c}!D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+T\+H@{D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+T\+H@{D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+T\+H}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+T\+H~3}\label{ciddeco_8c_af0113b8a0d65aab384607436aa155838}
+\hypertarget{ciddeco_8c_afb8c72ce35c4a1f4a2588d6573e54aa1}{}\index{ciddeco.\+c@{ciddeco.\+c}!D\+A\+T\+A\+\_\+\+T\+Y\+P\+E@{D\+A\+T\+A\+\_\+\+T\+Y\+P\+E}}
+\index{D\+A\+T\+A\+\_\+\+T\+Y\+P\+E@{D\+A\+T\+A\+\_\+\+T\+Y\+P\+E}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{D\+A\+T\+A\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+T\+Y\+P\+E~2}\label{ciddeco_8c_afb8c72ce35c4a1f4a2588d6573e54aa1}
+\hypertarget{ciddeco_8c_a03c576e7396d21254316447e7eb73dc8}{}\index{ciddeco.\+c@{ciddeco.\+c}!F\+I\+L\+E\+\_\+\+O\+F\+F\+S\+E\+T@{F\+I\+L\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{F\+I\+L\+E\+\_\+\+O\+F\+F\+S\+E\+T@{F\+I\+L\+E\+\_\+\+O\+F\+F\+S\+E\+T}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{F\+I\+L\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+L\+E\+\_\+\+O\+F\+F\+S\+E\+T~113600}\label{ciddeco_8c_a03c576e7396d21254316447e7eb73dc8}
+\hypertarget{ciddeco_8c_ac146c3c7afc6f342ae4f476bd46d924a}{}\index{ciddeco.\+c@{ciddeco.\+c}!M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H@{M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H@{M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+T\+H~1}\label{ciddeco_8c_ac146c3c7afc6f342ae4f476bd46d924a}
+\hypertarget{ciddeco_8c_a7fba09db2bbeb0dbcca0105428c5a652}{}\index{ciddeco.\+c@{ciddeco.\+c}!M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E@{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E}}
+\index{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E@{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E~0}\label{ciddeco_8c_a7fba09db2bbeb0dbcca0105428c5a652}
+\hypertarget{ciddeco_8c_ac1ae4add974b9cfc6b5aaf8a578f01ab}{}\index{ciddeco.\+c@{ciddeco.\+c}!U\+N\+K\+N\+O\+W\+N@{U\+N\+K\+N\+O\+W\+N}}
+\index{U\+N\+K\+N\+O\+W\+N@{U\+N\+K\+N\+O\+W\+N}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{U\+N\+K\+N\+O\+W\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+N\+K\+N\+O\+W\+N~10}\label{ciddeco_8c_ac1ae4add974b9cfc6b5aaf8a578f01ab}
+
+
+\subsection{Function Documentation}
+\hypertarget{ciddeco_8c_a064fa3b055fb52a7dac2cbed7c63a5f8}{}\index{ciddeco.\+c@{ciddeco.\+c}!callerid\+\_\+feed@{callerid\+\_\+feed}}
+\index{callerid\+\_\+feed@{callerid\+\_\+feed}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{callerid\+\_\+feed}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+feed (
+\begin{DoxyParamCaption}
+\item[{struct {\bf callerid\+\_\+state} $\ast$}]{cid, }
+\item[{unsigned char $\ast$}]{ubuf, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\label{ciddeco_8c_a064fa3b055fb52a7dac2cbed7c63a5f8}
+
+
+Read samples into the state machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cid} & Which state machine to act upon \\
+\hline
+{\em ubuf} & containing your samples \\
+\hline
+{\em len} & number of samples contained within the buffer.\\
+\hline
+\end{DoxyParams}
+Send received audio to the Caller$\ast$\+I\+D demodulator. 
+\begin{DoxyRetVals}{Return values}
+{\em -\/1} & on error \\
+\hline
+{\em 0} & for \char`\"{}needs more samples\char`\"{} \\
+\hline
+{\em 1} & if the Caller\+I\+D spill reception is complete. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{ciddeco_8c_a4d792e593d99c8b5b3a5534e73082c9d}{}\index{ciddeco.\+c@{ciddeco.\+c}!callerid\+\_\+free@{callerid\+\_\+free}}
+\index{callerid\+\_\+free@{callerid\+\_\+free}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{callerid\+\_\+free}]{\setlength{\rightskip}{0pt plus 5cm}void callerid\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{struct {\bf callerid\+\_\+state} $\ast$}]{cid}
+\end{DoxyParamCaption}
+)}\label{ciddeco_8c_a4d792e593d99c8b5b3a5534e73082c9d}
+
+
+This function frees \hyperlink{structcallerid__state}{callerid\+\_\+state} cid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cid} & This is the \hyperlink{structcallerid__state}{callerid\+\_\+state} state machine to free \\
+\hline
+\end{DoxyParams}
+\hypertarget{ciddeco_8c_adc002ff8c5972c35907d9ef2aa2ec161}{}\index{ciddeco.\+c@{ciddeco.\+c}!callerid\+\_\+new@{callerid\+\_\+new}}
+\index{callerid\+\_\+new@{callerid\+\_\+new}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{callerid\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf callerid\+\_\+state}$\ast$ callerid\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{int}]{cid\+\_\+signalling, }
+\item[{{\bf Param} $\ast$}]{demod\+\_\+param}
+\end{DoxyParamCaption}
+)}\label{ciddeco_8c_adc002ff8c5972c35907d9ef2aa2ec161}
+
+
+Create a caller\+I\+D state machine. 
+
+This function returns a malloc\textquotesingle{}d instance of the \hyperlink{structcallerid__state}{callerid\+\_\+state} data structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cid\+\_\+signalling} & Type of signalling in use \\
+\hline
+{\em demod\+\_\+param} & pointer to struct \hyperlink{structParam}{Param} containing sampling and baud rate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to a malloc\textquotesingle{}d \hyperlink{structcallerid__state}{callerid\+\_\+state} structure, or N\+U\+L\+L on error. 
+\end{DoxyReturn}
+\hypertarget{ciddeco_8c_aed8d3c6a765781523ed8964b7523f5e3}{}\index{ciddeco.\+c@{ciddeco.\+c}!decode\+\_\+\+C\+I\+D\+\_\+msg@{decode\+\_\+\+C\+I\+D\+\_\+msg}}
+\index{decode\+\_\+\+C\+I\+D\+\_\+msg@{decode\+\_\+\+C\+I\+D\+\_\+msg}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{decode\+\_\+\+C\+I\+D\+\_\+msg}]{\setlength{\rightskip}{0pt plus 5cm}static int decode\+\_\+\+C\+I\+D\+\_\+msg (
+\begin{DoxyParamCaption}
+\item[{struct {\bf callerid\+\_\+state} $\ast$}]{cid, }
+\item[{int}]{data\+\_\+byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{ciddeco_8c_aed8d3c6a765781523ed8964b7523f5e3}
+
+
+Decoding the C\+I\+D message. 
+
+The data block message bytes are organized as follows\+: ~\newline
+ 1) Message type, 1 byte -- 0x80 (M\+D\+M\+F), or 0x04 (S\+D\+M\+F). ~\newline
+ 2) Length , 1 byte -- This length value excludes the single-\/byte Checksum ~\newline
+ 3) Data type, 1 byte -- 0x01 = date \& time, 0x02 = phone number, 0x04 = number not present, 0x07 = name, 0x08 = name not present ~\newline
+ 4) Length of data, 1 byte ~\newline
+ 5) Data bytes, variable number according to length ~\newline
+ 6) Repeat Items 3, 4, and 5 as needed to complete the Caller I\+D message ~\newline
+ 7) Checksum, 1 byte -- Add this to the modulo-\/256 sum of all the previous bytes in the message, including the message type and message length; a zero result indicates no errors detected ~\newline
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em cid} & pointer to \hyperlink{structcallerid__state}{callerid\+\_\+state} data structure \\
+\hline
+{\em data\+\_\+byte} & demodulated F\+S\+K message byte\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful else -\/1 if error 
+\end{DoxyReturn}
+\hypertarget{ciddeco_8c_a9f70cb7819a623e9914ad71526ae232e}{}\index{ciddeco.\+c@{ciddeco.\+c}!get\+\_\+\+C\+I\+D\+\_\+info@{get\+\_\+\+C\+I\+D\+\_\+info}}
+\index{get\+\_\+\+C\+I\+D\+\_\+info@{get\+\_\+\+C\+I\+D\+\_\+info}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{get\+\_\+\+C\+I\+D\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}static void get\+\_\+\+C\+I\+D\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{struct {\bf callerid\+\_\+state} $\ast$}]{cid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{ciddeco_8c_a9f70cb7819a623e9914ad71526ae232e}
+
+
+This function Display the Caller\+I\+D message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cid} & This is the \hyperlink{structcallerid__state}{callerid\+\_\+state} state machine to free \\
+\hline
+\end{DoxyParams}
+\hypertarget{ciddeco_8c_a010855d0f62d4eefc3df76540f0ab368}{}\index{ciddeco.\+c@{ciddeco.\+c}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{get\+Header}]{\setlength{\rightskip}{0pt plus 5cm}static int get\+Header (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{wavbuf\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{ciddeco_8c_a010855d0f62d4eefc3df76540f0ab368}
+
+
+Display the Wav file header information. 
+
+\begin{DoxyReturn}{Returns}
+size of the header to remove the offset from the buffer 
+\end{DoxyReturn}
+\hypertarget{ciddeco_8c_a0ddf1224851353fc92bfbff6f499fa97}{}\index{ciddeco.\+c@{ciddeco.\+c}!main@{main}}
+\index{main@{main}!ciddeco.\+c@{ciddeco.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{ciddeco_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Demodulate Caller I\+D. 
+

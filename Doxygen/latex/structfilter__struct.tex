@@ -1,0 +1,70 @@
+\hypertarget{structfilter__struct}{}\section{filter\+\_\+struct Struct Reference}
+\label{structfilter__struct}\index{filter\+\_\+struct@{filter\+\_\+struct}}
+
+
+new filter structure  
+
+
+
+
+{\ttfamily \#include $<$fskmodem.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}{c\+\_\+coef} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em array to store filter \textquotesingle{}c\textquotesingle{} coefficients \end{DoxyCompactList}\item 
+double \hyperlink{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}{d\+\_\+coef} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em array to store filter \textquotesingle{}d\textquotesingle{} coefficients \end{DoxyCompactList}\item 
+double \hyperlink{structfilter__struct_a2e543e657138b4849b87c35ad84e6cf4}{xv} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em array to store previous input values \end{DoxyCompactList}\item 
+double \hyperlink{structfilter__struct_a37b2cc0e29d911e039c4fbd8dc7cd4b7}{yv} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em array to store previous output values \end{DoxyCompactList}\item 
+double \hyperlink{structfilter__struct_ab8686688a862499e0cbb431206f6536d}{gain}
+\begin{DoxyCompactList}\small\item\em Gain of the filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+new filter structure 
+
+\subsection{Field Documentation}
+\hypertarget{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}{}\index{filter\+\_\+struct@{filter\+\_\+struct}!c\+\_\+coef@{c\+\_\+coef}}
+\index{c\+\_\+coef@{c\+\_\+coef}!filter\+\_\+struct@{filter\+\_\+struct}}
+\subsubsection[{c\+\_\+coef}]{\setlength{\rightskip}{0pt plus 5cm}int filter\+\_\+struct\+::c\+\_\+coef\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}}\label{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}
+
+
+array to store filter \textquotesingle{}c\textquotesingle{} coefficients 
+
+\hypertarget{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}{}\index{filter\+\_\+struct@{filter\+\_\+struct}!d\+\_\+coef@{d\+\_\+coef}}
+\index{d\+\_\+coef@{d\+\_\+coef}!filter\+\_\+struct@{filter\+\_\+struct}}
+\subsubsection[{d\+\_\+coef}]{\setlength{\rightskip}{0pt plus 5cm}double filter\+\_\+struct\+::d\+\_\+coef\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}}\label{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}
+
+
+array to store filter \textquotesingle{}d\textquotesingle{} coefficients 
+
+\hypertarget{structfilter__struct_ab8686688a862499e0cbb431206f6536d}{}\index{filter\+\_\+struct@{filter\+\_\+struct}!gain@{gain}}
+\index{gain@{gain}!filter\+\_\+struct@{filter\+\_\+struct}}
+\subsubsection[{gain}]{\setlength{\rightskip}{0pt plus 5cm}double filter\+\_\+struct\+::gain}\label{structfilter__struct_ab8686688a862499e0cbb431206f6536d}
+
+
+Gain of the filter. 
+
+\hypertarget{structfilter__struct_a2e543e657138b4849b87c35ad84e6cf4}{}\index{filter\+\_\+struct@{filter\+\_\+struct}!xv@{xv}}
+\index{xv@{xv}!filter\+\_\+struct@{filter\+\_\+struct}}
+\subsubsection[{xv}]{\setlength{\rightskip}{0pt plus 5cm}double filter\+\_\+struct\+::xv\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}}\label{structfilter__struct_a2e543e657138b4849b87c35ad84e6cf4}
+
+
+array to store previous input values 
+
+\hypertarget{structfilter__struct_a37b2cc0e29d911e039c4fbd8dc7cd4b7}{}\index{filter\+\_\+struct@{filter\+\_\+struct}!yv@{yv}}
+\index{yv@{yv}!filter\+\_\+struct@{filter\+\_\+struct}}
+\subsubsection[{yv}]{\setlength{\rightskip}{0pt plus 5cm}double filter\+\_\+struct\+::yv\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}}\label{structfilter__struct_a37b2cc0e29d911e039c4fbd8dc7cd4b7}
+
+
+array to store previous output values 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fskmodem_8h}{fskmodem.\+h}\end{DoxyCompactItemize}

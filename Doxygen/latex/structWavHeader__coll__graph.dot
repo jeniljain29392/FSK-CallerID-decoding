@@ -1,0 +1,6 @@
+digraph "WavHeader"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{WavHeader\n|+ chunk_id\l+ chunk_size\l+ format\l+ fmtchunk_id\l+ fmtchunk_size\l+ audio_format\l+ num_channels\l+ sample_rate\l+ byte_rate\l+ block_align\l+ bps\l+ datachunk_id\l+ datachunk_size\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

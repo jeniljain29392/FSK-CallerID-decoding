@@ -1,0 +1,16 @@
+digraph "fskmodem.c"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="fskmodem.c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="unistd.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="filter_coefficients.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$filter__coefficients_8h.html",tooltip="File containing coefficients for various filters used by the program. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="fskmodem.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8h.html",tooltip="FSK Demodulation. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="gnuplot_i.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

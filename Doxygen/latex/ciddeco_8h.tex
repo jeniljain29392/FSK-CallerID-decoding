@@ -1,0 +1,138 @@
+\hypertarget{ciddeco_8h}{}\section{ciddeco.\+h File Reference}
+\label{ciddeco_8h}\index{ciddeco.\+h@{ciddeco.\+h}}
+
+
+Decodes Caller\+I\+D message.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structWavHeader}{Wav\+Header}
+\begin{DoxyCompactList}\small\item\em Wav file header. \end{DoxyCompactList}\item 
+struct \hyperlink{structParam}{Param}
+\begin{DoxyCompactList}\small\item\em Parameters for F\+S\+K Demodulation. \end{DoxyCompactList}\item 
+struct \hyperlink{structcallerid__state}{callerid\+\_\+state}
+\begin{DoxyCompactList}\small\item\em Defining struct for Caller I\+D state machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ciddeco_8h_aa3d409629df5696c54157649828f175b}{C\+I\+D\+\_\+\+S\+I\+G\+\_\+\+V23}~0
+\begin{DoxyCompactList}\small\item\em Caller I\+D standard. \end{DoxyCompactList}\item 
+\#define \hyperlink{ciddeco_8h_a0136145ca76e1ebd3b1c6d193691625c}{C\+I\+D\+\_\+\+B\+E\+L\+L\+C\+O\+R\+E\+\_\+\+F\+S\+K}~1
+\begin{DoxyCompactList}\small\item\em Caller I\+D standard used in U\+S. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcallerid__state}{callerid\+\_\+state} $\ast$ \hyperlink{ciddeco_8h_adc002ff8c5972c35907d9ef2aa2ec161}{callerid\+\_\+new} (int cid\+\_\+signalling, \hyperlink{structParam}{Param} $\ast$demod\+\_\+param)
+\begin{DoxyCompactList}\small\item\em Create a caller\+I\+D state machine. \end{DoxyCompactList}\item 
+int \hyperlink{ciddeco_8h_a064fa3b055fb52a7dac2cbed7c63a5f8}{callerid\+\_\+feed} (struct \hyperlink{structcallerid__state}{callerid\+\_\+state} $\ast$cid, unsigned char $\ast$ubuf, int len)
+\begin{DoxyCompactList}\small\item\em Read samples into the state machine. \end{DoxyCompactList}\item 
+void \hyperlink{ciddeco_8h_a4d792e593d99c8b5b3a5534e73082c9d}{callerid\+\_\+free} (struct \hyperlink{structcallerid__state}{callerid\+\_\+state} $\ast$cid)
+\begin{DoxyCompactList}\small\item\em This function frees \hyperlink{structcallerid__state}{callerid\+\_\+state} cid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Decodes Caller\+I\+D message. 
+
+\begin{DoxyAuthor}{Author}
+Jenil Jain 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2015 Insensi Inc. All rights reserved. This project is released under the G\+N\+U Public License.
+\end{DoxyCopyright}
+\begin{DoxyNote}{Note}
+Includes code and algorithms from the Zapata library and Aesterisk. 
+\end{DoxyNote}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ciddeco_8h_a0136145ca76e1ebd3b1c6d193691625c}{}\index{ciddeco.\+h@{ciddeco.\+h}!C\+I\+D\+\_\+\+B\+E\+L\+L\+C\+O\+R\+E\+\_\+\+F\+S\+K@{C\+I\+D\+\_\+\+B\+E\+L\+L\+C\+O\+R\+E\+\_\+\+F\+S\+K}}
+\index{C\+I\+D\+\_\+\+B\+E\+L\+L\+C\+O\+R\+E\+\_\+\+F\+S\+K@{C\+I\+D\+\_\+\+B\+E\+L\+L\+C\+O\+R\+E\+\_\+\+F\+S\+K}!ciddeco.\+h@{ciddeco.\+h}}
+\subsubsection[{C\+I\+D\+\_\+\+B\+E\+L\+L\+C\+O\+R\+E\+\_\+\+F\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+I\+D\+\_\+\+B\+E\+L\+L\+C\+O\+R\+E\+\_\+\+F\+S\+K~1}\label{ciddeco_8h_a0136145ca76e1ebd3b1c6d193691625c}
+
+
+Caller I\+D standard used in U\+S. 
+
+\hypertarget{ciddeco_8h_aa3d409629df5696c54157649828f175b}{}\index{ciddeco.\+h@{ciddeco.\+h}!C\+I\+D\+\_\+\+S\+I\+G\+\_\+\+V23@{C\+I\+D\+\_\+\+S\+I\+G\+\_\+\+V23}}
+\index{C\+I\+D\+\_\+\+S\+I\+G\+\_\+\+V23@{C\+I\+D\+\_\+\+S\+I\+G\+\_\+\+V23}!ciddeco.\+h@{ciddeco.\+h}}
+\subsubsection[{C\+I\+D\+\_\+\+S\+I\+G\+\_\+\+V23}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+I\+D\+\_\+\+S\+I\+G\+\_\+\+V23~0}\label{ciddeco_8h_aa3d409629df5696c54157649828f175b}
+
+
+Caller I\+D standard. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ciddeco_8h_a064fa3b055fb52a7dac2cbed7c63a5f8}{}\index{ciddeco.\+h@{ciddeco.\+h}!callerid\+\_\+feed@{callerid\+\_\+feed}}
+\index{callerid\+\_\+feed@{callerid\+\_\+feed}!ciddeco.\+h@{ciddeco.\+h}}
+\subsubsection[{callerid\+\_\+feed}]{\setlength{\rightskip}{0pt plus 5cm}int callerid\+\_\+feed (
+\begin{DoxyParamCaption}
+\item[{struct {\bf callerid\+\_\+state} $\ast$}]{cid, }
+\item[{unsigned char $\ast$}]{ubuf, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\label{ciddeco_8h_a064fa3b055fb52a7dac2cbed7c63a5f8}
+
+
+Read samples into the state machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cid} & Which state machine to act upon \\
+\hline
+{\em ubuf} & containing your samples \\
+\hline
+{\em len} & number of samples contained within the buffer.\\
+\hline
+\end{DoxyParams}
+Send received audio to the Caller$\ast$\+I\+D demodulator. 
+\begin{DoxyRetVals}{Return values}
+{\em -\/1} & on error \\
+\hline
+{\em 0} & for \char`\"{}needs more samples\char`\"{} \\
+\hline
+{\em 1} & if the Caller\+I\+D spill reception is complete. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{ciddeco_8h_a4d792e593d99c8b5b3a5534e73082c9d}{}\index{ciddeco.\+h@{ciddeco.\+h}!callerid\+\_\+free@{callerid\+\_\+free}}
+\index{callerid\+\_\+free@{callerid\+\_\+free}!ciddeco.\+h@{ciddeco.\+h}}
+\subsubsection[{callerid\+\_\+free}]{\setlength{\rightskip}{0pt plus 5cm}void callerid\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{struct {\bf callerid\+\_\+state} $\ast$}]{cid}
+\end{DoxyParamCaption}
+)}\label{ciddeco_8h_a4d792e593d99c8b5b3a5534e73082c9d}
+
+
+This function frees \hyperlink{structcallerid__state}{callerid\+\_\+state} cid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cid} & This is the \hyperlink{structcallerid__state}{callerid\+\_\+state} state machine to free \\
+\hline
+\end{DoxyParams}
+\hypertarget{ciddeco_8h_adc002ff8c5972c35907d9ef2aa2ec161}{}\index{ciddeco.\+h@{ciddeco.\+h}!callerid\+\_\+new@{callerid\+\_\+new}}
+\index{callerid\+\_\+new@{callerid\+\_\+new}!ciddeco.\+h@{ciddeco.\+h}}
+\subsubsection[{callerid\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf callerid\+\_\+state}$\ast$ callerid\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{int}]{cid\+\_\+signalling, }
+\item[{{\bf Param} $\ast$}]{demod\+\_\+param}
+\end{DoxyParamCaption}
+)}\label{ciddeco_8h_adc002ff8c5972c35907d9ef2aa2ec161}
+
+
+Create a caller\+I\+D state machine. 
+
+This function returns a malloc\textquotesingle{}d instance of the \hyperlink{structcallerid__state}{callerid\+\_\+state} data structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cid\+\_\+signalling} & Type of signalling in use \\
+\hline
+{\em demod\+\_\+param} & pointer to struct \hyperlink{structParam}{Param} containing sampling and baud rate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to a malloc\textquotesingle{}d \hyperlink{structcallerid__state}{callerid\+\_\+state} structure, or N\+U\+L\+L on error. 
+\end{DoxyReturn}

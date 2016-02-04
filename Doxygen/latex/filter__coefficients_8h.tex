@@ -1,0 +1,530 @@
+\hypertarget{filter__coefficients_8h}{}\section{filter\+\_\+coefficients.\+h File Reference}
+\label{filter__coefficients_8h}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+
+
+File containing coefficients for various filters used by the program.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{filter__coefficients_8h_a84909b16209480034c40276c4f84f975}{B\+W}~800
+\begin{DoxyCompactList}\small\item\em Bandwidth. \end{DoxyCompactList}\item 
+\#define \hyperlink{filter__coefficients_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}~6
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{filter__coefficients_8h_aa83475a2e082eddda709747473521dc9}{c\+\_\+coef\+\_\+3rd\+\_\+bp} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]} = \{-\/1, 0, 3, 0, -\/3, 0, 1\}
+\begin{DoxyCompactList}\small\item\em C coefficient for 3rd order Bandpass Filter. \end{DoxyCompactList}\item 
+static const int \hyperlink{filter__coefficients_8h_a313134d6a98b569e15459c26cdf23890}{c\+\_\+coef\+\_\+6th\+\_\+lp} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]} = \{1, 6, 15, 20, 15, 6, 1\}
+\begin{DoxyCompactList}\small\item\em C coefficient for 6th order Lowpass Filter. \end{DoxyCompactList}\item 
+static const int \hyperlink{filter__coefficients_8h_a66f4e350e5203e270eae7e2b9312dd7e}{zeros} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]} = \{0, 0, 0, 0, 0, 0, 0\}
+\begin{DoxyCompactList}\small\item\em Zeros for initializing xv and yv array. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a8df98d75ffbf39e0731675d4bb934e98}{gain\+\_\+1200hz} = 6.\+035447139e+03
+\begin{DoxyCompactList}\small\item\em Coefficients for Mark filters for 1200\+Hz and 44.\+1 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a9a2a113079670638ce052967030fdd1d}{d\+\_\+coef\+\_\+1200hz} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_a1b86adb34a6d4ed1cfe6fc2206e62b16}{gain\+\_\+1300hz} = 6.\+035463052e+03
+\begin{DoxyCompactList}\small\item\em Coefficients for Mark filters for 1300\+Hz and 44.\+1 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a65342c00cee4b02729f2d3e74f3276c6}{d\+\_\+coef\+\_\+1300hz} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_ad5e22dfa5e7d3316b77bb01a18780d78}{gain\+\_\+2100hz} = 6.\+035489699e+03
+\begin{DoxyCompactList}\small\item\em Coefficients for Space filters for 2100\+Hz and 44.\+1 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a29accce42377f611a4f79d0eaa9168fb}{d\+\_\+coef\+\_\+2100hz} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_a8e518a89b60010680a1559a750c8c871}{gain\+\_\+2200hz} = 6.\+035490118e+03
+\begin{DoxyCompactList}\small\item\em Coefficients for Space filters for 2200\+Hz and 44.\+1 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a5b628b1d6865f0f72f022a01a4c5cf18}{d\+\_\+coef\+\_\+2200hz} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_a68bdd8413ffe969268db4725fbc5b51f}{gain\+\_\+lp\+\_\+1700hz} = 4.\+921530591e+05
+\begin{DoxyCompactList}\small\item\em Coefficients for Low Pass filter for 1700\+Hz and 44.\+1 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a2e8a2a45a896840f8e754d39b48517e7}{d\+\_\+coef\+\_\+lp\+\_\+1700hz} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_a17d68928fdce091f045b6b2a6ba9a1d8}{gain\+\_\+1200hz\+\_\+48} = 7.\+714531525e+03
+\begin{DoxyCompactList}\small\item\em Coefficients for Mark filters for 1200\+Hz and 48 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a5a0ac6c416acdaed77f01f06c2130d48}{d\+\_\+coef\+\_\+1200hz\+\_\+48} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_a3b5ffb0419569cf11e8adc218b93644e}{gain\+\_\+1300hz\+\_\+48} = 7.\+714552008e+03
+\begin{DoxyCompactList}\small\item\em Coefficients for Mark filters for 1300\+Hz and 48 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a7239ae7b97775d77958c1a0c0aec5627}{d\+\_\+coef\+\_\+1300hz\+\_\+48} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_a5c990826c8bdbb21911c15c9a4314091}{gain\+\_\+2100hz\+\_\+48} = 7.\+714586427e+03
+\begin{DoxyCompactList}\small\item\em Coefficients for Space filters for 2100\+Hz and 48 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_aa595ef577ef7c0d5ec8ebeffcd3ca5cc}{d\+\_\+coef\+\_\+2100hz\+\_\+48} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_ad0a5d28ccc6172184e078dbb6d3c8472}{gain\+\_\+2200hz\+\_\+48} = 7.\+714586976e+03
+\begin{DoxyCompactList}\small\item\em Coefficients for Space filters for 2200\+Hz and 48 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a1d55313d9bd8255be61aeae4cd82ac66}{d\+\_\+coef\+\_\+2200hz\+\_\+48} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_a20fa11d2c0db80ef4268a5b7fcf6f327}{gain\+\_\+lp\+\_\+1700hz\+\_\+48} = 7.\+911546151e+05
+\begin{DoxyCompactList}\small\item\em Coefficients for Low Pass filter for 1700\+Hz and 48 Khz sampling. \end{DoxyCompactList}\item 
+static const double \hyperlink{filter__coefficients_8h_a6c0991972095eeff3051101b08d2bb7b}{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+48} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_af8ef8dc936455bf7f65b32a6a6765e4e}{gain\+\_\+1200hz\+\_\+16} = 3.\+450407729e+02
+\item 
+static const double \hyperlink{filter__coefficients_8h_a915cf1ac70dcab7156cbcd6bf0600e81}{d\+\_\+coef\+\_\+1200hz\+\_\+16} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_ad4e96b48b27dc992b20fe56204276ba8}{gain\+\_\+1300hz\+\_\+16} = 7.\+714552008e+03
+\item 
+static const double \hyperlink{filter__coefficients_8h_a9fe48c2e59a686338c5c97c1bd45a576}{d\+\_\+coef\+\_\+1300hz\+\_\+16} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_a55853166619a29102a17de363830e6b4}{gain\+\_\+2100hz\+\_\+16} = 7.\+714586427e+03
+\item 
+static const double \hyperlink{filter__coefficients_8h_a559a515165e3a36c9ee2d2fbccb2954e}{d\+\_\+coef\+\_\+2100hz\+\_\+16} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_a57ef84efecb0fe6c4b0eff5f487cc773}{gain\+\_\+2200hz\+\_\+16} = 3.\+450423755e+02
+\item 
+static const double \hyperlink{filter__coefficients_8h_af155b3fd950275305e5c30ab274d911a}{d\+\_\+coef\+\_\+2200hz\+\_\+16} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\item 
+static const double \hyperlink{filter__coefficients_8h_aaa160f6488350c2e3c3cfa0512da0142}{gain\+\_\+lp\+\_\+1700hz\+\_\+16} = 2.\+155293674e+03
+\item 
+static const double \hyperlink{filter__coefficients_8h_adea61e4f79a17669b7aedc5984e4a38d}{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+16} \mbox{[}\hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing coefficients for various filters used by the program. 
+
+\begin{DoxyAuthor}{Author}
+Jenil Jain 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2015 Insensi Inc. All rights reserved. This project is released under the G\+N\+U Public License.
+\end{DoxyCopyright}
+All Coefficients are generated by program \href{http://www-users.cs.york.ac.uk/~fisher/mkfilter/trad.html}{\tt mkfilter}. Corner frequencies can be calculated from \href{http://www.sengpielaudio.com/calculator-cutoffFrequencies.htm}{\tt cut-\/off}. ~\newline
+
+
+You can design your filter for a particular frequency just by changing the parameters. All the filters used are I\+I\+R and the general equation for it, is
+
+y\mbox{[}n\mbox{]} = c0$\ast$x\mbox{[}n\mbox{]} + c1$\ast$x\mbox{[}n-\/1\mbox{]} + ... + c\+M$\ast$x\mbox{[}n-\/\+M\mbox{]} -\/ ( d1$\ast$y\mbox{[}n-\/1\mbox{]} + d2$\ast$y\mbox{[}n-\/2\mbox{]} + ... + d\+N$\ast$y\mbox{[}n-\/\+N\mbox{]}) where N = no. of previous outputs \& ~\newline
+ M = no. of previous inputs ~\newline
+ c1,c2,...,c\+M = input coefficients ~\newline
+ d1,d2,...,d\+N = output coefficients ~\newline
+ x\mbox{[}n\mbox{]} = input values ~\newline
+ y\mbox{[}n\mbox{]} = output values ~\newline
+
+
+Example code for a 3rd order Band\+Pass filter 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define NZEROS 6}
+\textcolor{preprocessor}{       #define NPOLES 6}
+\textcolor{preprocessor}{       #define GAIN   6.035463052e+03}
+
+       \textcolor{keyword}{static} \textcolor{keywordtype}{float} xv[NZEROS+1], yv[NPOLES+1];
+       \textcolor{keyword}{static} \hyperlink{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}{d\_coef}[NZEROS + 1] = \{-0.7960564529, 4.8728234960, -12.5192737550, 
+                               17.2778325650, -13.5086884650, 5.6733267812, 1.0\}
+
+       \textcolor{keyword}{static} \hyperlink{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}{c\_coef}[NZEROS + 1] = \{-1, 0, 3, 0, -3, 0, 1\}
+
+       \textcolor{keyword}{static} \textcolor{keywordtype}{int} filterloop(\textcolor{keywordtype}{int} input)
+       \{
+           xv[0] = xv[1]; xv[1] = xv[2]; xv[2] = xv[3]; 
+           xv[3] = xv[4]; xv[4] = xv[5]; xv[5] = xv[6]; 
+           yv[0] = yv[1]; yv[1] = yv[2]; yv[2] = yv[3]; 
+           yv[3] = yv[4]; yv[4] = yv[5]; yv[5] = yv[6]; 
+           
+           xv[6] = input / GAIN;
+           
+           yv[6] = (\hyperlink{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}{c\_coef}[0] * xv[0]) + (\hyperlink{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}{c\_coef}[1] * xv[1]) + 
+                   (\hyperlink{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}{c\_coef}[2] * xv[2]) + (\hyperlink{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}{c\_coef}[3] * xv[3]) + 
+                   (\hyperlink{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}{c\_coef}[4] * xv[4]) + (\hyperlink{structfilter__struct_a85747cbd60c344fc5e1e7ce15025b127}{c\_coef}[5] * xv[5]) +
+
+                   (\hyperlink{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}{d\_coef}[0] * yv[0]) + (\hyperlink{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}{d\_coef}[1] * yv[1]) + 
+                   (\hyperlink{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}{d\_coef}[2] * yv[2]) + (\hyperlink{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}{d\_coef}[3] * yv[3]) + 
+                   (\hyperlink{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}{d\_coef}[4] * yv[4]) + (\hyperlink{structfilter__struct_a96ca838138c74e416c59b6f35b7b965c}{d\_coef}[5] * yv[5]);
+           \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int}) yv[6];
+       \}
+\end{DoxyCode}
+ 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{filter__coefficients_8h_a84909b16209480034c40276c4f84f975}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!B\+W@{B\+W}}
+\index{B\+W@{B\+W}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{B\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+W~800}\label{filter__coefficients_8h_a84909b16209480034c40276c4f84f975}
+
+
+Bandwidth. 
+
+\hypertarget{filter__coefficients_8h_a3a08212b9b4c3ffb27449545dde26a2b}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S@{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}}
+\index{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S@{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S~6}\label{filter__coefficients_8h_a3a08212b9b4c3ffb27449545dde26a2b}
+No. of zeros depends on order of the filter For a 3rd order Bandpass filter, zeros and poles are 6. But for a 3rd order Low-\/\+Pass or High-\/\+Pass filter it is 3. So to keep the number of poles \& zeros constant we are using 3rd order Bandpass and 6th order Low-\/pass for demodulation 
+
+\subsection{Variable Documentation}
+\hypertarget{filter__coefficients_8h_aa83475a2e082eddda709747473521dc9}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!c\+\_\+coef\+\_\+3rd\+\_\+bp@{c\+\_\+coef\+\_\+3rd\+\_\+bp}}
+\index{c\+\_\+coef\+\_\+3rd\+\_\+bp@{c\+\_\+coef\+\_\+3rd\+\_\+bp}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{c\+\_\+coef\+\_\+3rd\+\_\+bp}]{\setlength{\rightskip}{0pt plus 5cm}const int c\+\_\+coef\+\_\+3rd\+\_\+bp\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]} = \{-\/1, 0, 3, 0, -\/3, 0, 1\}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_aa83475a2e082eddda709747473521dc9}
+
+
+C coefficient for 3rd order Bandpass Filter. 
+
+\hypertarget{filter__coefficients_8h_a313134d6a98b569e15459c26cdf23890}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!c\+\_\+coef\+\_\+6th\+\_\+lp@{c\+\_\+coef\+\_\+6th\+\_\+lp}}
+\index{c\+\_\+coef\+\_\+6th\+\_\+lp@{c\+\_\+coef\+\_\+6th\+\_\+lp}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{c\+\_\+coef\+\_\+6th\+\_\+lp}]{\setlength{\rightskip}{0pt plus 5cm}const int c\+\_\+coef\+\_\+6th\+\_\+lp\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]} = \{1, 6, 15, 20, 15, 6, 1\}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a313134d6a98b569e15459c26cdf23890}
+
+
+C coefficient for 6th order Lowpass Filter. 
+
+\hypertarget{filter__coefficients_8h_a9a2a113079670638ce052967030fdd1d}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+1200hz@{d\+\_\+coef\+\_\+1200hz}}
+\index{d\+\_\+coef\+\_\+1200hz@{d\+\_\+coef\+\_\+1200hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+1200hz}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+1200hz\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a9a2a113079670638ce052967030fdd1d}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.7960564529,
+    4.8853503505, -12.5704962310, 17.3572300720, -13.5639614690, 5.6879115366, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a915cf1ac70dcab7156cbcd6bf0600e81}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+1200hz\+\_\+16@{d\+\_\+coef\+\_\+1200hz\+\_\+16}}
+\index{d\+\_\+coef\+\_\+1200hz\+\_\+16@{d\+\_\+coef\+\_\+1200hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+1200hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+1200hz\+\_\+16\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a915cf1ac70dcab7156cbcd6bf0600e81}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.5320753683,
+    3.1381363581, -8.1321890445, 11.7763561920, -10.0414792500, 4.7835061525, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a5a0ac6c416acdaed77f01f06c2130d48}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+1200hz\+\_\+48@{d\+\_\+coef\+\_\+1200hz\+\_\+48}}
+\index{d\+\_\+coef\+\_\+1200hz\+\_\+48@{d\+\_\+coef\+\_\+1200hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+1200hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+1200hz\+\_\+48\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a5a0ac6c416acdaed77f01f06c2130d48}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.8109608719,
+    4.9734833008, -12.7760535460, 17.5948994070, -13.7006793120, 5.7192975419, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a65342c00cee4b02729f2d3e74f3276c6}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+1300hz@{d\+\_\+coef\+\_\+1300hz}}
+\index{d\+\_\+coef\+\_\+1300hz@{d\+\_\+coef\+\_\+1300hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+1300hz}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+1300hz\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a65342c00cee4b02729f2d3e74f3276c6}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.7960564529, 
+    4.8728234960, -12.5192737550, 17.2778325650, -13.5086884650, 5.6733267812, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a9fe48c2e59a686338c5c97c1bd45a576}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+1300hz\+\_\+16@{d\+\_\+coef\+\_\+1300hz\+\_\+16}}
+\index{d\+\_\+coef\+\_\+1300hz\+\_\+16@{d\+\_\+coef\+\_\+1300hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+1300hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+1300hz\+\_\+16\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a9fe48c2e59a686338c5c97c1bd45a576}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.8109608719, 
+    4.9627363056, -12.7321344850, 17.5269785470, -13.6535802120, 5.7069389474, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a7239ae7b97775d77958c1a0c0aec5627}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+1300hz\+\_\+48@{d\+\_\+coef\+\_\+1300hz\+\_\+48}}
+\index{d\+\_\+coef\+\_\+1300hz\+\_\+48@{d\+\_\+coef\+\_\+1300hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+1300hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+1300hz\+\_\+48\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a7239ae7b97775d77958c1a0c0aec5627}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.8109608719, 
+    4.9627363056, -12.7321344850, 17.5269785470, -13.6535802120, 5.7069389474, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a29accce42377f611a4f79d0eaa9168fb}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+2100hz@{d\+\_\+coef\+\_\+2100hz}}
+\index{d\+\_\+coef\+\_\+2100hz@{d\+\_\+coef\+\_\+2100hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+2100hz}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+2100hz\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a29accce42377f611a4f79d0eaa9168fb}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.7960564529, 
+    4.7372163175, -11.9731917700, 16.4353856510, -12.9194238570, 5.5154421711, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a559a515165e3a36c9ee2d2fbccb2954e}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+2100hz\+\_\+16@{d\+\_\+coef\+\_\+2100hz\+\_\+16}}
+\index{d\+\_\+coef\+\_\+2100hz\+\_\+16@{d\+\_\+coef\+\_\+2100hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+2100hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+2100hz\+\_\+16\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a559a515165e3a36c9ee2d2fbccb2954e}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.8109608719, 
+    4.8463050158, -12.2624122920, 16.8034849110, -13.1498469240, 5.5730478395, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_aa595ef577ef7c0d5ec8ebeffcd3ca5cc}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+2100hz\+\_\+48@{d\+\_\+coef\+\_\+2100hz\+\_\+48}}
+\index{d\+\_\+coef\+\_\+2100hz\+\_\+48@{d\+\_\+coef\+\_\+2100hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+2100hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+2100hz\+\_\+48\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_aa595ef577ef7c0d5ec8ebeffcd3ca5cc}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.8109608719, 
+    4.8463050158, -12.2624122920, 16.8034849110, -13.1498469240, 5.5730478395, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a5b628b1d6865f0f72f022a01a4c5cf18}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+2200hz@{d\+\_\+coef\+\_\+2200hz}}
+\index{d\+\_\+coef\+\_\+2200hz@{d\+\_\+coef\+\_\+2200hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+2200hz}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+2200hz\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a5b628b1d6865f0f72f022a01a4c5cf18}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.7960564529, 
+    4.7158930488, -11.8887264470, 16.3057248700, -12.8282792550, 5.4906159340, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_af155b3fd950275305e5c30ab274d911a}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+2200hz\+\_\+16@{d\+\_\+coef\+\_\+2200hz\+\_\+16}}
+\index{d\+\_\+coef\+\_\+2200hz\+\_\+16@{d\+\_\+coef\+\_\+2200hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+2200hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+2200hz\+\_\+16\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_af155b3fd950275305e5c30ab274d911a}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.5320753683, 
+    2.2795472690, -5.2023382825, 7.1423622606, -6.4198613572, 3.4747465189, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a1d55313d9bd8255be61aeae4cd82ac66}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+2200hz\+\_\+48@{d\+\_\+coef\+\_\+2200hz\+\_\+48}}
+\index{d\+\_\+coef\+\_\+2200hz\+\_\+48@{d\+\_\+coef\+\_\+2200hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+2200hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+2200hz\+\_\+48\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a1d55313d9bd8255be61aeae4cd82ac66}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.8109608719, 
+    4.8279816404, -12.1895052890, 16.6916642700, -13.0716609570, 5.5519767250, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a2e8a2a45a896840f8e754d39b48517e7}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+lp\+\_\+1700hz@{d\+\_\+coef\+\_\+lp\+\_\+1700hz}}
+\index{d\+\_\+coef\+\_\+lp\+\_\+1700hz@{d\+\_\+coef\+\_\+lp\+\_\+1700hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+lp\+\_\+1700hz}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+lp\+\_\+1700hz\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a2e8a2a45a896840f8e754d39b48517e7}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.3911214670, 
+    2.7125767203, -7.8710687721, 12.2354456210, -10.7505803000, 5.0646181573, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_adea61e4f79a17669b7aedc5984e4a38d}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+16@{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+16}}
+\index{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+16@{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+16\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_adea61e4f79a17669b7aedc5984e4a38d}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.0712022265, 
+    0.6102683340, -2.2329558363, 4.4846591081, -5.2494746975, 3.4290109889, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a6c0991972095eeff3051101b08d2bb7b}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+48@{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+48}}
+\index{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+48@{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double d\+\_\+coef\+\_\+lp\+\_\+1700hz\+\_\+48\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a6c0991972095eeff3051101b08d2bb7b}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{-0.4222972557, 
+    2.8967245878, -8.3083998149, 12.7576882370, -11.0643521500, 5.1405555009, 1.0\}
+\end{DoxyCode}
+\hypertarget{filter__coefficients_8h_a8df98d75ffbf39e0731675d4bb934e98}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+1200hz@{gain\+\_\+1200hz}}
+\index{gain\+\_\+1200hz@{gain\+\_\+1200hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+1200hz}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+1200hz = 6.\+035447139e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a8df98d75ffbf39e0731675d4bb934e98}
+
+
+Coefficients for Mark filters for 1200\+Hz and 44.\+1 Khz sampling. 
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Bandpass \\
+\hline
+{\em order} & 3 \\
+\hline
+{\em sample\+\_\+rate} & 44100 \\
+\hline
+{\em corner1} & 864.\+911 \\
+\hline
+{\em corner2} & 1664.\+911 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_af8ef8dc936455bf7f65b32a6a6765e4e}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+1200hz\+\_\+16@{gain\+\_\+1200hz\+\_\+16}}
+\index{gain\+\_\+1200hz\+\_\+16@{gain\+\_\+1200hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+1200hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+1200hz\+\_\+16 = 3.\+450407729e+02\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_af8ef8dc936455bf7f65b32a6a6765e4e}
+\hypertarget{filter__coefficients_8h_a17d68928fdce091f045b6b2a6ba9a1d8}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+1200hz\+\_\+48@{gain\+\_\+1200hz\+\_\+48}}
+\index{gain\+\_\+1200hz\+\_\+48@{gain\+\_\+1200hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+1200hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+1200hz\+\_\+48 = 7.\+714531525e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a17d68928fdce091f045b6b2a6ba9a1d8}
+
+
+Coefficients for Mark filters for 1200\+Hz and 48 Khz sampling. 
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Bandpass \\
+\hline
+{\em order} & 3 \\
+\hline
+{\em sample\+\_\+rate} & 48000 \\
+\hline
+{\em corner1} & 864.\+911 \\
+\hline
+{\em corner2} & 1664.\+911 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_a1b86adb34a6d4ed1cfe6fc2206e62b16}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+1300hz@{gain\+\_\+1300hz}}
+\index{gain\+\_\+1300hz@{gain\+\_\+1300hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+1300hz}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+1300hz = 6.\+035463052e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a1b86adb34a6d4ed1cfe6fc2206e62b16}
+
+
+Coefficients for Mark filters for 1300\+Hz and 44.\+1 Khz sampling. 
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Bandpass \\
+\hline
+{\em order} & 3 \\
+\hline
+{\em sample\+\_\+rate} & 44100 \\
+\hline
+{\em corner1} & 960.\+147 \\
+\hline
+{\em corner2} & 1760.\+147 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_ad4e96b48b27dc992b20fe56204276ba8}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+1300hz\+\_\+16@{gain\+\_\+1300hz\+\_\+16}}
+\index{gain\+\_\+1300hz\+\_\+16@{gain\+\_\+1300hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+1300hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+1300hz\+\_\+16 = 7.\+714552008e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_ad4e96b48b27dc992b20fe56204276ba8}
+\hypertarget{filter__coefficients_8h_a3b5ffb0419569cf11e8adc218b93644e}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+1300hz\+\_\+48@{gain\+\_\+1300hz\+\_\+48}}
+\index{gain\+\_\+1300hz\+\_\+48@{gain\+\_\+1300hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+1300hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+1300hz\+\_\+48 = 7.\+714552008e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a3b5ffb0419569cf11e8adc218b93644e}
+
+
+Coefficients for Mark filters for 1300\+Hz and 48 Khz sampling. 
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Bandpass \\
+\hline
+{\em order} & 3 \\
+\hline
+{\em sample\+\_\+rate} & 48000 \\
+\hline
+{\em corner1} & 960.\+147 \\
+\hline
+{\em corner2} & 1760.\+147 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_ad5e22dfa5e7d3316b77bb01a18780d78}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+2100hz@{gain\+\_\+2100hz}}
+\index{gain\+\_\+2100hz@{gain\+\_\+2100hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+2100hz}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+2100hz = 6.\+035489699e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_ad5e22dfa5e7d3316b77bb01a18780d78}
+
+
+Coefficients for Space filters for 2100\+Hz and 44.\+1 Khz sampling. 
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Bandpass \\
+\hline
+{\em order} & 3 \\
+\hline
+{\em sample\+\_\+rate} & 44100 \\
+\hline
+{\em corner1} & 1737.\+756 \\
+\hline
+{\em corner2} & 2537.\+756 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_a55853166619a29102a17de363830e6b4}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+2100hz\+\_\+16@{gain\+\_\+2100hz\+\_\+16}}
+\index{gain\+\_\+2100hz\+\_\+16@{gain\+\_\+2100hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+2100hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+2100hz\+\_\+16 = 7.\+714586427e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a55853166619a29102a17de363830e6b4}
+\hypertarget{filter__coefficients_8h_a5c990826c8bdbb21911c15c9a4314091}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+2100hz\+\_\+48@{gain\+\_\+2100hz\+\_\+48}}
+\index{gain\+\_\+2100hz\+\_\+48@{gain\+\_\+2100hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+2100hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+2100hz\+\_\+48 = 7.\+714586427e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a5c990826c8bdbb21911c15c9a4314091}
+
+
+Coefficients for Space filters for 2100\+Hz and 48 Khz sampling. 
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Bandpass \\
+\hline
+{\em order} & 3 \\
+\hline
+{\em sample\+\_\+rate} & 48000 \\
+\hline
+{\em corner1} & 1737.\+756 \\
+\hline
+{\em corner2} & 2537.\+756 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_a8e518a89b60010680a1559a750c8c871}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+2200hz@{gain\+\_\+2200hz}}
+\index{gain\+\_\+2200hz@{gain\+\_\+2200hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+2200hz}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+2200hz = 6.\+035490118e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a8e518a89b60010680a1559a750c8c871}
+
+
+Coefficients for Space filters for 2200\+Hz and 44.\+1 Khz sampling. 
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Bandpass \\
+\hline
+{\em order} & 3 \\
+\hline
+{\em sample\+\_\+rate} & 44100 \\
+\hline
+{\em corner1} & 1737.\+756 \\
+\hline
+{\em corner2} & 2537.\+756 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_a57ef84efecb0fe6c4b0eff5f487cc773}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+2200hz\+\_\+16@{gain\+\_\+2200hz\+\_\+16}}
+\index{gain\+\_\+2200hz\+\_\+16@{gain\+\_\+2200hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+2200hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+2200hz\+\_\+16 = 3.\+450423755e+02\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a57ef84efecb0fe6c4b0eff5f487cc773}
+\hypertarget{filter__coefficients_8h_ad0a5d28ccc6172184e078dbb6d3c8472}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+2200hz\+\_\+48@{gain\+\_\+2200hz\+\_\+48}}
+\index{gain\+\_\+2200hz\+\_\+48@{gain\+\_\+2200hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+2200hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+2200hz\+\_\+48 = 7.\+714586976e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_ad0a5d28ccc6172184e078dbb6d3c8472}
+
+
+Coefficients for Space filters for 2200\+Hz and 48 Khz sampling. 
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Bandpass \\
+\hline
+{\em order} & 3 \\
+\hline
+{\em sample\+\_\+rate} & 48000 \\
+\hline
+{\em corner1} & 1737.\+756 \\
+\hline
+{\em corner2} & 2537.\+756 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_a68bdd8413ffe969268db4725fbc5b51f}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+lp\+\_\+1700hz@{gain\+\_\+lp\+\_\+1700hz}}
+\index{gain\+\_\+lp\+\_\+1700hz@{gain\+\_\+lp\+\_\+1700hz}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+lp\+\_\+1700hz}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+lp\+\_\+1700hz = 4.\+921530591e+05\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a68bdd8413ffe969268db4725fbc5b51f}
+
+
+Coefficients for Low Pass filter for 1700\+Hz and 44.\+1 Khz sampling. 
+
+Since 1700 is center of both ranges 1200-\/2200 and 1300-\/2100
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Low Pass \\
+\hline
+{\em order} & 6 \\
+\hline
+{\em sample\+\_\+rate} & 44100 \\
+\hline
+{\em corner1} & 1700 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_aaa160f6488350c2e3c3cfa0512da0142}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+lp\+\_\+1700hz\+\_\+16@{gain\+\_\+lp\+\_\+1700hz\+\_\+16}}
+\index{gain\+\_\+lp\+\_\+1700hz\+\_\+16@{gain\+\_\+lp\+\_\+1700hz\+\_\+16}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+lp\+\_\+1700hz\+\_\+16}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+lp\+\_\+1700hz\+\_\+16 = 2.\+155293674e+03\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_aaa160f6488350c2e3c3cfa0512da0142}
+\hypertarget{filter__coefficients_8h_a20fa11d2c0db80ef4268a5b7fcf6f327}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!gain\+\_\+lp\+\_\+1700hz\+\_\+48@{gain\+\_\+lp\+\_\+1700hz\+\_\+48}}
+\index{gain\+\_\+lp\+\_\+1700hz\+\_\+48@{gain\+\_\+lp\+\_\+1700hz\+\_\+48}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{gain\+\_\+lp\+\_\+1700hz\+\_\+48}]{\setlength{\rightskip}{0pt plus 5cm}const double gain\+\_\+lp\+\_\+1700hz\+\_\+48 = 7.\+911546151e+05\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a20fa11d2c0db80ef4268a5b7fcf6f327}
+
+
+Coefficients for Low Pass filter for 1700\+Hz and 48 Khz sampling. 
+
+Since 1700 is center of both ranges 1200-\/2200 and 1300-\/2100
+
+Filter Design parameters 
+\begin{DoxyParams}{Parameters}
+{\em filtertype} & Butterworth \\
+\hline
+{\em passtype} & Low Pass \\
+\hline
+{\em order} & 6 \\
+\hline
+{\em sample\+\_\+rate} & 48000 \\
+\hline
+{\em corner1} & 1700 \\
+\hline
+\end{DoxyParams}
+\hypertarget{filter__coefficients_8h_a66f4e350e5203e270eae7e2b9312dd7e}{}\index{filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}!zeros@{zeros}}
+\index{zeros@{zeros}!filter\+\_\+coefficients.\+h@{filter\+\_\+coefficients.\+h}}
+\subsubsection[{zeros}]{\setlength{\rightskip}{0pt plus 5cm}const int zeros\mbox{[}{\bf N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}+1\mbox{]} = \{0, 0, 0, 0, 0, 0, 0\}\hspace{0.3cm}{\ttfamily [static]}}\label{filter__coefficients_8h_a66f4e350e5203e270eae7e2b9312dd7e}
+
+
+Zeros for initializing xv and yv array. 
+

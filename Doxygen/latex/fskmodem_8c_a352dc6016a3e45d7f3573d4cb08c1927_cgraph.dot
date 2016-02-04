@@ -1,0 +1,13 @@
+digraph "get_bit_raw"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="get_bit_raw",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="iget_sample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a326f107539430dc475144721e8a3d688",tooltip="Get the current sample. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="idemodulator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a1e056276c5df3a6f1803aed2313871cf",tooltip="FSK demodulation. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="filter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fskmodem_8c.html#a0cd322aafcc68375d9ee1f5ac4d60b46",tooltip="General function for filtering any frequency. "];
+}

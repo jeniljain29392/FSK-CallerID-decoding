@@ -1,0 +1,92 @@
+\hypertarget{structWavHeader}{}\section{Wav\+Header Struct Reference}
+\label{structWavHeader}\index{Wav\+Header@{Wav\+Header}}
+
+
+Wav file header.  
+
+
+
+
+{\ttfamily \#include $<$ciddeco.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{structWavHeader_abd1d58ce017d5f2b70956efb6cf0b8fc}{chunk\+\_\+id} \mbox{[}4\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{structWavHeader_a480084e5c629d831fcdbc1c8d8b0a891}{chunk\+\_\+size}
+\item 
+char \hyperlink{structWavHeader_ab1748144c5a74f514973d13aa2257e7c}{format} \mbox{[}4\mbox{]}
+\item 
+char \hyperlink{structWavHeader_a627f513d728348d196e9a01094a9a2a4}{fmtchunk\+\_\+id} \mbox{[}4\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{structWavHeader_a4ef84c118ca11eb3aca198b8e2a14294}{fmtchunk\+\_\+size}
+\item 
+uint16\+\_\+t \hyperlink{structWavHeader_a175a26284b9fe51691b0a4e600997dca}{audio\+\_\+format}
+\item 
+uint16\+\_\+t \hyperlink{structWavHeader_a072ed76b242729913c20ed54643c7516}{num\+\_\+channels}
+\item 
+uint32\+\_\+t \hyperlink{structWavHeader_ae6042020cde1102dfeabfc30576c1e52}{sample\+\_\+rate}
+\item 
+uint32\+\_\+t \hyperlink{structWavHeader_a9e6e51114d572f6fe71cd00cd101343d}{byte\+\_\+rate}
+\item 
+uint16\+\_\+t \hyperlink{structWavHeader_a55417acd8c1774caee8928ad8fe86c07}{block\+\_\+align}
+\item 
+uint16\+\_\+t \hyperlink{structWavHeader_a891be94aa1622e40a40b1887ec0d950f}{bps}
+\item 
+char \hyperlink{structWavHeader_a5baeb0eb6368ca4135a0bb0334e15bd5}{datachunk\+\_\+id} \mbox{[}4\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{structWavHeader_a9979ac5e8fa6b5595e2cfbe2d4fe0ff3}{datachunk\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wav file header. 
+
+The header is the beginning of a W\+A\+V (R\+I\+F\+F) file. The header is used to provide specifications on the file type, sample rate, sample size and bit size of the file, as well as its overall length. 
+
+\subsection{Field Documentation}
+\hypertarget{structWavHeader_a175a26284b9fe51691b0a4e600997dca}{}\index{Wav\+Header@{Wav\+Header}!audio\+\_\+format@{audio\+\_\+format}}
+\index{audio\+\_\+format@{audio\+\_\+format}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{audio\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Wav\+Header\+::audio\+\_\+format}\label{structWavHeader_a175a26284b9fe51691b0a4e600997dca}
+\hypertarget{structWavHeader_a55417acd8c1774caee8928ad8fe86c07}{}\index{Wav\+Header@{Wav\+Header}!block\+\_\+align@{block\+\_\+align}}
+\index{block\+\_\+align@{block\+\_\+align}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{block\+\_\+align}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Wav\+Header\+::block\+\_\+align}\label{structWavHeader_a55417acd8c1774caee8928ad8fe86c07}
+\hypertarget{structWavHeader_a891be94aa1622e40a40b1887ec0d950f}{}\index{Wav\+Header@{Wav\+Header}!bps@{bps}}
+\index{bps@{bps}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{bps}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Wav\+Header\+::bps}\label{structWavHeader_a891be94aa1622e40a40b1887ec0d950f}
+\hypertarget{structWavHeader_a9e6e51114d572f6fe71cd00cd101343d}{}\index{Wav\+Header@{Wav\+Header}!byte\+\_\+rate@{byte\+\_\+rate}}
+\index{byte\+\_\+rate@{byte\+\_\+rate}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{byte\+\_\+rate}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Wav\+Header\+::byte\+\_\+rate}\label{structWavHeader_a9e6e51114d572f6fe71cd00cd101343d}
+\hypertarget{structWavHeader_abd1d58ce017d5f2b70956efb6cf0b8fc}{}\index{Wav\+Header@{Wav\+Header}!chunk\+\_\+id@{chunk\+\_\+id}}
+\index{chunk\+\_\+id@{chunk\+\_\+id}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{chunk\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}char Wav\+Header\+::chunk\+\_\+id\mbox{[}4\mbox{]}}\label{structWavHeader_abd1d58ce017d5f2b70956efb6cf0b8fc}
+\hypertarget{structWavHeader_a480084e5c629d831fcdbc1c8d8b0a891}{}\index{Wav\+Header@{Wav\+Header}!chunk\+\_\+size@{chunk\+\_\+size}}
+\index{chunk\+\_\+size@{chunk\+\_\+size}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{chunk\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Wav\+Header\+::chunk\+\_\+size}\label{structWavHeader_a480084e5c629d831fcdbc1c8d8b0a891}
+\hypertarget{structWavHeader_a5baeb0eb6368ca4135a0bb0334e15bd5}{}\index{Wav\+Header@{Wav\+Header}!datachunk\+\_\+id@{datachunk\+\_\+id}}
+\index{datachunk\+\_\+id@{datachunk\+\_\+id}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{datachunk\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}char Wav\+Header\+::datachunk\+\_\+id\mbox{[}4\mbox{]}}\label{structWavHeader_a5baeb0eb6368ca4135a0bb0334e15bd5}
+\hypertarget{structWavHeader_a9979ac5e8fa6b5595e2cfbe2d4fe0ff3}{}\index{Wav\+Header@{Wav\+Header}!datachunk\+\_\+size@{datachunk\+\_\+size}}
+\index{datachunk\+\_\+size@{datachunk\+\_\+size}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{datachunk\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Wav\+Header\+::datachunk\+\_\+size}\label{structWavHeader_a9979ac5e8fa6b5595e2cfbe2d4fe0ff3}
+\hypertarget{structWavHeader_a627f513d728348d196e9a01094a9a2a4}{}\index{Wav\+Header@{Wav\+Header}!fmtchunk\+\_\+id@{fmtchunk\+\_\+id}}
+\index{fmtchunk\+\_\+id@{fmtchunk\+\_\+id}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{fmtchunk\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}char Wav\+Header\+::fmtchunk\+\_\+id\mbox{[}4\mbox{]}}\label{structWavHeader_a627f513d728348d196e9a01094a9a2a4}
+\hypertarget{structWavHeader_a4ef84c118ca11eb3aca198b8e2a14294}{}\index{Wav\+Header@{Wav\+Header}!fmtchunk\+\_\+size@{fmtchunk\+\_\+size}}
+\index{fmtchunk\+\_\+size@{fmtchunk\+\_\+size}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{fmtchunk\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Wav\+Header\+::fmtchunk\+\_\+size}\label{structWavHeader_a4ef84c118ca11eb3aca198b8e2a14294}
+\hypertarget{structWavHeader_ab1748144c5a74f514973d13aa2257e7c}{}\index{Wav\+Header@{Wav\+Header}!format@{format}}
+\index{format@{format}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{format}]{\setlength{\rightskip}{0pt plus 5cm}char Wav\+Header\+::format\mbox{[}4\mbox{]}}\label{structWavHeader_ab1748144c5a74f514973d13aa2257e7c}
+\hypertarget{structWavHeader_a072ed76b242729913c20ed54643c7516}{}\index{Wav\+Header@{Wav\+Header}!num\+\_\+channels@{num\+\_\+channels}}
+\index{num\+\_\+channels@{num\+\_\+channels}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{num\+\_\+channels}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Wav\+Header\+::num\+\_\+channels}\label{structWavHeader_a072ed76b242729913c20ed54643c7516}
+\hypertarget{structWavHeader_ae6042020cde1102dfeabfc30576c1e52}{}\index{Wav\+Header@{Wav\+Header}!sample\+\_\+rate@{sample\+\_\+rate}}
+\index{sample\+\_\+rate@{sample\+\_\+rate}!Wav\+Header@{Wav\+Header}}
+\subsubsection[{sample\+\_\+rate}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Wav\+Header\+::sample\+\_\+rate}\label{structWavHeader_ae6042020cde1102dfeabfc30576c1e52}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ciddeco_8h}{ciddeco.\+h}\end{DoxyCompactItemize}

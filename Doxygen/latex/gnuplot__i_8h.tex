@@ -1,0 +1,509 @@
+\hypertarget{gnuplot__i_8h}{}\section{gnuplot/gnuplot\+\_\+i.h File Reference}
+\label{gnuplot__i_8h}\index{gnuplot/gnuplot\+\_\+i.\+h@{gnuplot/gnuplot\+\_\+i.\+h}}
+
+
+C interface to gnuplot.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__GNUPLOT__CTRL__}{\+\_\+\+G\+N\+U\+P\+L\+O\+T\+\_\+\+C\+T\+R\+L\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gnuplot__i_8h_a0b92738856c4bda43003d1c847483dd2}{G\+P\+\_\+\+M\+A\+X\+\_\+\+T\+M\+P\+\_\+\+F\+I\+L\+E\+S}~64
+\item 
+\#define \hyperlink{gnuplot__i_8h_a093b4c5627360601a4605251ed3495c8}{G\+P\+\_\+\+T\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E}~512
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__GNUPLOT__CTRL__}{\+\_\+\+G\+N\+U\+P\+L\+O\+T\+\_\+\+C\+T\+R\+L\+\_\+} \hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl}
+\begin{DoxyCompactList}\small\item\em gnuplot session handle (opaque type). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{gnuplot__i_8h_a1b0761cb5baec67abf54f3323ab1308a}{gnuplot\+\_\+get\+\_\+program\+\_\+path} (char $\ast$pname)
+\begin{DoxyCompactList}\small\item\em Find out where a command lives in your P\+A\+T\+H. \end{DoxyCompactList}\item 
+\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$ \hyperlink{gnuplot__i_8h_af38602f2bf3bf427b4c6af1e3cc6f371}{gnuplot\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Opens up a gnuplot session, ready to receive commands. \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_a416bd48453ce016d6419f0f39fa5c625}{gnuplot\+\_\+close} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Closes a gnuplot session previously opened by \hyperlink{gnuplot__i_8h_af38602f2bf3bf427b4c6af1e3cc6f371}{gnuplot\+\_\+init()} \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_ab83416050af25c799438579d8473f54a}{gnuplot\+\_\+cmd} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$handle, char $\ast$cmd,...)
+\begin{DoxyCompactList}\small\item\em Sends a command to an active gnuplot session. \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_a6e5c073fc8478c3ea121f308254b683a}{gnuplot\+\_\+setstyle} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$h, char $\ast$plot\+\_\+style)
+\begin{DoxyCompactList}\small\item\em Change the plotting style of a gnuplot session. \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_a7ca8edad06bd82e47329b2ab8341c42e}{gnuplot\+\_\+set\+\_\+xlabel} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$h, char $\ast$label)
+\begin{DoxyCompactList}\small\item\em Sets the x label of a gnuplot session. \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_a9227fc7321820f696e91f76c15c6ffe3}{gnuplot\+\_\+set\+\_\+ylabel} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$h, char $\ast$label)
+\begin{DoxyCompactList}\small\item\em Sets the y label of a gnuplot session. \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_ad069541eba46f659f58635abc9256340}{gnuplot\+\_\+resetplot} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Resets a gnuplot session (next plot will erase previous ones). \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_a40d69df891d29584351244cf046616b1}{gnuplot\+\_\+plot\+\_\+x} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$handle, double $\ast$d, int n, char $\ast$title)
+\begin{DoxyCompactList}\small\item\em Plots a 2d graph from a list of doubles. \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_a75d0c98d601621974e9687126f922ebd}{gnuplot\+\_\+plot\+\_\+xy} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$handle, double $\ast$x, double $\ast$y, int n, char $\ast$title)
+\begin{DoxyCompactList}\small\item\em Plot a 2d graph from a list of points. \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_aa39b56b6bb882ace839a3be677d1f665}{gnuplot\+\_\+plot\+\_\+once} (char $\ast$title, char $\ast$style, char $\ast$label\+\_\+x, char $\ast$label\+\_\+y, double $\ast$x, double $\ast$y, int n)
+\begin{DoxyCompactList}\small\item\em Open a new session, plot a signal, close the session. \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_a0622d593434823fccadcc4415db5fe2d}{gnuplot\+\_\+plot\+\_\+slope} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$handle, double a, double b, char $\ast$title)
+\begin{DoxyCompactList}\small\item\em Plot a slope on a gnuplot session. \end{DoxyCompactList}\item 
+void \hyperlink{gnuplot__i_8h_a6bdca4094881ef48bd03bb66a521bfdd}{gnuplot\+\_\+plot\+\_\+equation} (\hyperlink{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{gnuplot\+\_\+ctrl} $\ast$h, char $\ast$equation, char $\ast$title)
+\begin{DoxyCompactList}\small\item\em Plot a curve of given equation y=f(x). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C interface to gnuplot. 
+
+\begin{DoxyAuthor}{Author}
+N. Devillard 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Sep 1998 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+
+\end{DoxyVersion}
+\begin{DoxyParagraph}{Revision}
+1.\+11 
+\end{DoxyParagraph}
+gnuplot is a freely available, command-\/driven graphical display tool for Unix. It compiles and works quite well on a number of Unix flavours as well as other operating systems. The following module enables sending display requests to gnuplot through simple C calls. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{gnuplot__i_8h_a0b92738856c4bda43003d1c847483dd2}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!G\+P\+\_\+\+M\+A\+X\+\_\+\+T\+M\+P\+\_\+\+F\+I\+L\+E\+S@{G\+P\+\_\+\+M\+A\+X\+\_\+\+T\+M\+P\+\_\+\+F\+I\+L\+E\+S}}
+\index{G\+P\+\_\+\+M\+A\+X\+\_\+\+T\+M\+P\+\_\+\+F\+I\+L\+E\+S@{G\+P\+\_\+\+M\+A\+X\+\_\+\+T\+M\+P\+\_\+\+F\+I\+L\+E\+S}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{G\+P\+\_\+\+M\+A\+X\+\_\+\+T\+M\+P\+\_\+\+F\+I\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+\_\+\+M\+A\+X\+\_\+\+T\+M\+P\+\_\+\+F\+I\+L\+E\+S~64}\label{gnuplot__i_8h_a0b92738856c4bda43003d1c847483dd2}
+Maximal number of simultaneous temporary files \hypertarget{gnuplot__i_8h_a093b4c5627360601a4605251ed3495c8}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!G\+P\+\_\+\+T\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E@{G\+P\+\_\+\+T\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E}}
+\index{G\+P\+\_\+\+T\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E@{G\+P\+\_\+\+T\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{G\+P\+\_\+\+T\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+\_\+\+T\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E~512}\label{gnuplot__i_8h_a093b4c5627360601a4605251ed3495c8}
+Maximal size of a temporary file name 
+
+\subsection{Typedef Documentation}
+\hypertarget{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+ctrl@{gnuplot\+\_\+ctrl}}
+\index{gnuplot\+\_\+ctrl@{gnuplot\+\_\+ctrl}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+ctrl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gnuplot\+\_\+ctrl}}\label{gnuplot__i_8h_a33ca8c1cab7115ecc104f9d26d6fdf85}
+
+
+gnuplot session handle (opaque type). 
+
+This structure holds all necessary information to talk to a gnuplot session. It is built and returned by \hyperlink{gnuplot__i_8h_af38602f2bf3bf427b4c6af1e3cc6f371}{gnuplot\+\_\+init()} and later used by all functions in this module to communicate with the session, then meant to be closed by \hyperlink{gnuplot__i_8h_a416bd48453ce016d6419f0f39fa5c625}{gnuplot\+\_\+close()}.
+
+This structure is meant to remain opaque, you normally do not need to know what is contained in there. 
+
+\subsection{Function Documentation}
+\hypertarget{gnuplot__i_8h_a416bd48453ce016d6419f0f39fa5c625}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+close@{gnuplot\+\_\+close}}
+\index{gnuplot\+\_\+close@{gnuplot\+\_\+close}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+close}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_a416bd48453ce016d6419f0f39fa5c625}
+
+
+Closes a gnuplot session previously opened by \hyperlink{gnuplot__i_8h_af38602f2bf3bf427b4c6af1e3cc6f371}{gnuplot\+\_\+init()} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Gnuplot session control handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Kills the child P\+I\+D and deletes all opened temporary files. It is mandatory to call this function to close the handle, otherwise temporary files are not cleaned and child process might survive. \hypertarget{gnuplot__i_8h_ab83416050af25c799438579d8473f54a}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+cmd@{gnuplot\+\_\+cmd}}
+\index{gnuplot\+\_\+cmd@{gnuplot\+\_\+cmd}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+cmd}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{handle, }
+\item[{char $\ast$}]{cmd, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_ab83416050af25c799438579d8473f54a}
+
+
+Sends a command to an active gnuplot session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Gnuplot session control handle \\
+\hline
+{\em cmd} & Command to send, same as a printf statement.\\
+\hline
+\end{DoxyParams}
+This sends a string to an active gnuplot session, to be executed. There is strictly no way to know if the command has been successfully executed or not. The command syntax is the same as printf.
+
+Examples\+:
+
+
+\begin{DoxyCode}
+1 gnuplot\_cmd(g, "plot %d*x", 23.0);
+2 gnuplot\_cmd(g, "plot %g * cos(%g * x)", 32.0, -3.0);
+\end{DoxyCode}
+
+
+Since the communication to the gnuplot process is run through a standard Unix pipe, it is only unidirectional. This means that it is not possible for this interface to query an error status back from gnuplot. \hypertarget{gnuplot__i_8h_a1b0761cb5baec67abf54f3323ab1308a}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+get\+\_\+program\+\_\+path@{gnuplot\+\_\+get\+\_\+program\+\_\+path}}
+\index{gnuplot\+\_\+get\+\_\+program\+\_\+path@{gnuplot\+\_\+get\+\_\+program\+\_\+path}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+get\+\_\+program\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ gnuplot\+\_\+get\+\_\+program\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pname}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_a1b0761cb5baec67abf54f3323ab1308a}
+
+
+Find out where a command lives in your P\+A\+T\+H. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pname} & Name of the program to look for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to statically allocated character string.
+\end{DoxyReturn}
+This is the C equivalent to the \textquotesingle{}which\textquotesingle{} command in Unix. It parses out your P\+A\+T\+H environment variable to find out where a command lives. The returned character string is statically allocated within this function, i.\+e. there is no need to free it. Beware that the contents of this string will change from one call to the next, though (as all static variables in a function).
+
+The input character string must be the name of a command without prefixing path of any kind, i.\+e. only the command name. The returned string is the path in which a command matching the same name was found.
+
+Examples (assuming there is a prog named \textquotesingle{}hello\textquotesingle{} in the cwd)\+:
+
+\begin{DoxyVerb}gnuplot_get_program_path("hello") returns "."
+gnuplot_get_program_path("ls") returns "/bin"
+gnuplot_get_program_path("csh") returns "/usr/bin"
+gnuplot_get_program_path("/bin/ls") returns NULL
+\end{DoxyVerb}
+ \hypertarget{gnuplot__i_8h_af38602f2bf3bf427b4c6af1e3cc6f371}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+init@{gnuplot\+\_\+init}}
+\index{gnuplot\+\_\+init@{gnuplot\+\_\+init}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gnuplot\+\_\+ctrl}$\ast$ gnuplot\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_af38602f2bf3bf427b4c6af1e3cc6f371}
+
+
+Opens up a gnuplot session, ready to receive commands. 
+
+\begin{DoxyReturn}{Returns}
+Newly allocated gnuplot control structure.
+\end{DoxyReturn}
+This opens up a new gnuplot session, ready for input. The struct controlling a gnuplot session should remain opaque and only be accessed through the provided functions.
+
+The session must be closed using \hyperlink{gnuplot__i_8h_a416bd48453ce016d6419f0f39fa5c625}{gnuplot\+\_\+close()}. \hypertarget{gnuplot__i_8h_a6bdca4094881ef48bd03bb66a521bfdd}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+plot\+\_\+equation@{gnuplot\+\_\+plot\+\_\+equation}}
+\index{gnuplot\+\_\+plot\+\_\+equation@{gnuplot\+\_\+plot\+\_\+equation}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+plot\+\_\+equation}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+plot\+\_\+equation (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{h, }
+\item[{char $\ast$}]{equation, }
+\item[{char $\ast$}]{title}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_a6bdca4094881ef48bd03bb66a521bfdd}
+
+
+Plot a curve of given equation y=f(x). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Gnuplot session control handle. \\
+\hline
+{\em equation} & Equation to plot. \\
+\hline
+{\em title} & Title of the plot. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Plots out a curve of given equation. The general form of the equation is y=f(x), you only provide the f(x) side of the equation.
+
+Example\+:
+
+
+\begin{DoxyCode}
+1 gnuplot\_ctrl    *h ;
+2 char            eq[80] ;
+3 
+4 h = gnuplot\_init() ;
+5 strcpy(eq, "sin(x) * cos(2*x)") ;
+6 gnuplot\_plot\_equation(h, eq, "sine wave", normal) ;
+7 gnuplot\_close(h) ;
+\end{DoxyCode}
+ \hypertarget{gnuplot__i_8h_aa39b56b6bb882ace839a3be677d1f665}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+plot\+\_\+once@{gnuplot\+\_\+plot\+\_\+once}}
+\index{gnuplot\+\_\+plot\+\_\+once@{gnuplot\+\_\+plot\+\_\+once}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+plot\+\_\+once}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+plot\+\_\+once (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{title, }
+\item[{char $\ast$}]{style, }
+\item[{char $\ast$}]{label\+\_\+x, }
+\item[{char $\ast$}]{label\+\_\+y, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{y, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_aa39b56b6bb882ace839a3be677d1f665}
+
+
+Open a new session, plot a signal, close the session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Plot title \\
+\hline
+{\em style} & Plot style \\
+\hline
+{\em label\+\_\+x} & Label for X \\
+\hline
+{\em label\+\_\+y} & Label for Y \\
+\hline
+{\em x} & Array of X coordinates \\
+\hline
+{\em y} & Array of Y coordinates (can be N\+U\+L\+L) \\
+\hline
+{\em n} & Number of values in x and y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+This function opens a new gnuplot session, plots the provided signal as an X or X\+Y signal depending on a provided y, waits for a carriage return on stdin and closes the session.
+
+It is Ok to provide an empty title, empty style, or empty labels for X and Y. Defaults are provided in this case. \hypertarget{gnuplot__i_8h_a0622d593434823fccadcc4415db5fe2d}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+plot\+\_\+slope@{gnuplot\+\_\+plot\+\_\+slope}}
+\index{gnuplot\+\_\+plot\+\_\+slope@{gnuplot\+\_\+plot\+\_\+slope}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+plot\+\_\+slope}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+plot\+\_\+slope (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{handle, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{char $\ast$}]{title}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_a0622d593434823fccadcc4415db5fe2d}
+
+
+Plot a slope on a gnuplot session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Gnuplot session control handle. \\
+\hline
+{\em a} & Slope. \\
+\hline
+{\em b} & Intercept. \\
+\hline
+{\em title} & Title of the plot. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Plot a slope on a gnuplot session. The provided slope has an equation of the form y=ax+b
+
+Example\+:
+
+
+\begin{DoxyCode}
+1 gnuplot\_ctrl    *   h ;
+2 double              a, b ;
+3 
+4 h = gnuplot\_init() ;
+5 gnuplot\_plot\_slope(h, 1.0, 0.0, "unity slope") ;
+6 sleep(2) ;
+7 gnuplot\_close(h) ;
+\end{DoxyCode}
+ \hypertarget{gnuplot__i_8h_a40d69df891d29584351244cf046616b1}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+plot\+\_\+x@{gnuplot\+\_\+plot\+\_\+x}}
+\index{gnuplot\+\_\+plot\+\_\+x@{gnuplot\+\_\+plot\+\_\+x}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+plot\+\_\+x}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+plot\+\_\+x (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{handle, }
+\item[{double $\ast$}]{d, }
+\item[{int}]{n, }
+\item[{char $\ast$}]{title}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_a40d69df891d29584351244cf046616b1}
+
+
+Plots a 2d graph from a list of doubles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Gnuplot session control handle. \\
+\hline
+{\em d} & Array of doubles. \\
+\hline
+{\em n} & Number of values in the passed array. \\
+\hline
+{\em title} & Title of the plot. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Plots out a 2d graph from a list of doubles. The x-\/coordinate is the index of the double in the list, the y coordinate is the double in the list.
+
+Example\+:
+
+
+\begin{DoxyCode}
+1 gnuplot\_ctrl    *h ;
+2 double          d[50] ;
+3 int             i ;
+4 
+5 h = gnuplot\_init() ;
+6 for (i=0 ; i<50 ; i++) \{
+7     d[i] = (double)(i*i) ;
+8 \}
+9 gnuplot\_plot\_x(h, d, 50, "parabola") ;
+10 sleep(2) ;
+11 gnuplot\_close(h) ;
+\end{DoxyCode}
+ \hypertarget{gnuplot__i_8h_a75d0c98d601621974e9687126f922ebd}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+plot\+\_\+xy@{gnuplot\+\_\+plot\+\_\+xy}}
+\index{gnuplot\+\_\+plot\+\_\+xy@{gnuplot\+\_\+plot\+\_\+xy}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+plot\+\_\+xy}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+plot\+\_\+xy (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{handle, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{y, }
+\item[{int}]{n, }
+\item[{char $\ast$}]{title}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_a75d0c98d601621974e9687126f922ebd}
+
+
+Plot a 2d graph from a list of points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Gnuplot session control handle. \\
+\hline
+{\em x} & Pointer to a list of x coordinates. \\
+\hline
+{\em y} & Pointer to a list of y coordinates. \\
+\hline
+{\em n} & Number of doubles in x (assumed the same as in y). \\
+\hline
+{\em title} & Title of the plot. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Plots out a 2d graph from a list of points. Provide points through a list of x and a list of y coordinates. Both provided arrays are assumed to contain the same number of values.
+
+
+\begin{DoxyCode}
+1 gnuplot\_ctrl    *h ;
+2 double          x[50] ;
+3 double          y[50] ;
+4 int             i ;
+5 
+6 h = gnuplot\_init() ;
+7 for (i=0 ; i<50 ; i++) \{
+8     x[i] = (double)(i)/10.0 ;
+9     y[i] = x[i] * x[i] ;
+10 \}
+11 gnuplot\_plot\_xy(h, x, y, 50, "parabola") ;
+12 sleep(2) ;
+13 gnuplot\_close(h) ;
+\end{DoxyCode}
+ \hypertarget{gnuplot__i_8h_ad069541eba46f659f58635abc9256340}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+resetplot@{gnuplot\+\_\+resetplot}}
+\index{gnuplot\+\_\+resetplot@{gnuplot\+\_\+resetplot}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+resetplot}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+resetplot (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{h}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_ad069541eba46f659f58635abc9256340}
+
+
+Resets a gnuplot session (next plot will erase previous ones). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Gnuplot session control handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Resets a gnuplot session, i.\+e. the next plot will erase all previous ones. \hypertarget{gnuplot__i_8h_a7ca8edad06bd82e47329b2ab8341c42e}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+set\+\_\+xlabel@{gnuplot\+\_\+set\+\_\+xlabel}}
+\index{gnuplot\+\_\+set\+\_\+xlabel@{gnuplot\+\_\+set\+\_\+xlabel}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+set\+\_\+xlabel}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+set\+\_\+xlabel (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{h, }
+\item[{char $\ast$}]{label}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_a7ca8edad06bd82e47329b2ab8341c42e}
+
+
+Sets the x label of a gnuplot session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Gnuplot session control handle. \\
+\hline
+{\em label} & Character string to use for X label. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Sets the x label for a gnuplot session. \hypertarget{gnuplot__i_8h_a9227fc7321820f696e91f76c15c6ffe3}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+set\+\_\+ylabel@{gnuplot\+\_\+set\+\_\+ylabel}}
+\index{gnuplot\+\_\+set\+\_\+ylabel@{gnuplot\+\_\+set\+\_\+ylabel}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+set\+\_\+ylabel}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+set\+\_\+ylabel (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{h, }
+\item[{char $\ast$}]{label}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_a9227fc7321820f696e91f76c15c6ffe3}
+
+
+Sets the y label of a gnuplot session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Gnuplot session control handle. \\
+\hline
+{\em label} & Character string to use for Y label. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Sets the y label for a gnuplot session. \hypertarget{gnuplot__i_8h_a6e5c073fc8478c3ea121f308254b683a}{}\index{gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}!gnuplot\+\_\+setstyle@{gnuplot\+\_\+setstyle}}
+\index{gnuplot\+\_\+setstyle@{gnuplot\+\_\+setstyle}!gnuplot\+\_\+i.\+h@{gnuplot\+\_\+i.\+h}}
+\subsubsection[{gnuplot\+\_\+setstyle}]{\setlength{\rightskip}{0pt plus 5cm}void gnuplot\+\_\+setstyle (
+\begin{DoxyParamCaption}
+\item[{{\bf gnuplot\+\_\+ctrl} $\ast$}]{h, }
+\item[{char $\ast$}]{plot\+\_\+style}
+\end{DoxyParamCaption}
+)}\label{gnuplot__i_8h_a6e5c073fc8478c3ea121f308254b683a}
+
+
+Change the plotting style of a gnuplot session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Gnuplot session control handle \\
+\hline
+{\em plot\+\_\+style} & Plotting-\/style to use (character string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+The provided plotting style is a character string. It must be one of the following\+:
+
+
+\begin{DoxyItemize}
+\item lines
+\item points
+\item linespoints
+\item impulses
+\item dots
+\item steps
+\item errorbars
+\item boxes
+\item boxeserrorbars 
+\end{DoxyItemize}

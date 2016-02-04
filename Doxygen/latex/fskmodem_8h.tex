@@ -1,0 +1,88 @@
+\hypertarget{fskmodem_8h}{}\section{fskmodem.\+h File Reference}
+\label{fskmodem_8h}\index{fskmodem.\+h@{fskmodem.\+h}}
+
+
+F\+S\+K Demodulation.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfilter__struct}{filter\+\_\+struct}
+\begin{DoxyCompactList}\small\item\em new filter structure \end{DoxyCompactList}\item 
+struct \hyperlink{structfsk__data}{fsk\+\_\+data}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}~6
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fskmodem_8h_a6315165519388f15eccffd8103769ee3}{fsk\+\_\+serial} (\hyperlink{structfsk__data}{fsk\+\_\+data} $\ast$fskd, short $\ast$buffer, int $\ast$len, int $\ast$outbyte)
+\begin{DoxyCompactList}\small\item\em Retrieve a serial byte into outbyte. \end{DoxyCompactList}\item 
+int \hyperlink{fskmodem_8h_a183afaf79ee92e26e8aacd129d9be3cb}{fskmodem\+\_\+init} (\hyperlink{structfsk__data}{fsk\+\_\+data} $\ast$fskd)
+\begin{DoxyCompactList}\small\item\em Initialize the F\+S\+K data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+F\+S\+K Demodulation. 
+
+\begin{DoxyAuthor}{Author}
+Jenil Jain 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2015 Insensi Inc. All rights reserved. This project is released under the G\+N\+U Public License.
+\end{DoxyCopyright}
+\begin{DoxyNote}{Note}
+Includes code and algorithms from the Zapata library and Aesterisk. 
+\end{DoxyNote}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}{}\index{fskmodem.\+h@{fskmodem.\+h}!N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S@{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}}
+\index{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S@{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}!fskmodem.\+h@{fskmodem.\+h}}
+\subsubsection[{N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+Z\+E\+R\+O\+S\+\_\+\+P\+O\+L\+E\+S~6}\label{fskmodem_8h_a3a08212b9b4c3ffb27449545dde26a2b}
+No. of zeros depends on order of the filter For a 3rd order Bandpass filter, zeros and poles are 6. But for a 3rd order Low-\/\+Pass or High-\/\+Pass filter it is 3. So to keep the number of poles \& zeros constant we are using 3rd order Bandpass and 6th order Low-\/pass for demodulation 
+
+\subsection{Function Documentation}
+\hypertarget{fskmodem_8h_a6315165519388f15eccffd8103769ee3}{}\index{fskmodem.\+h@{fskmodem.\+h}!fsk\+\_\+serial@{fsk\+\_\+serial}}
+\index{fsk\+\_\+serial@{fsk\+\_\+serial}!fskmodem.\+h@{fskmodem.\+h}}
+\subsubsection[{fsk\+\_\+serial}]{\setlength{\rightskip}{0pt plus 5cm}int fsk\+\_\+serial (
+\begin{DoxyParamCaption}
+\item[{{\bf fsk\+\_\+data} $\ast$}]{fskd, }
+\item[{short $\ast$}]{buffer, }
+\item[{int $\ast$}]{len, }
+\item[{int $\ast$}]{outbyte}
+\end{DoxyParamCaption}
+)}\label{fskmodem_8h_a6315165519388f15eccffd8103769ee3}
+
+
+Retrieve a serial byte into outbyte. 
+
+Buffer is a pointer into a series of shorts and len records the number of bytes in the buffer. len will be overwritten with the number of bytes left that were not consumed.
+
+\begin{DoxyReturn}{Returns}
+return value is as follows\+: \begin{DoxyItemize}
+\item 0\+: Still looking for something... \item 1\+: An output byte was received and stored in outbyte \item -\/1\+: An error occured in the transmission \end{DoxyItemize}
+
+\end{DoxyReturn}
+\hypertarget{fskmodem_8h_a183afaf79ee92e26e8aacd129d9be3cb}{}\index{fskmodem.\+h@{fskmodem.\+h}!fskmodem\+\_\+init@{fskmodem\+\_\+init}}
+\index{fskmodem\+\_\+init@{fskmodem\+\_\+init}!fskmodem.\+h@{fskmodem.\+h}}
+\subsubsection[{fskmodem\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}int fskmodem\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf fsk\+\_\+data} $\ast$}]{fskd}
+\end{DoxyParamCaption}
+)}\label{fskmodem_8h_a183afaf79ee92e26e8aacd129d9be3cb}
+
+
+Initialize the F\+S\+K data. 
+
+Initialize all the parameters used by the filter and demodulator functions to decode the C\+I\+D message. The parameters are already calculated in filter\+\_\+coefficient.\+h file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fskd} & pointer to \hyperlink{structfsk__data}{fsk\+\_\+data} struct \\
+\hline
+\end{DoxyParams}
